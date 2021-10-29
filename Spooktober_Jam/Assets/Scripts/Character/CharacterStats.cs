@@ -1,38 +1,52 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace Spooktober.Character
 {
-    public class CharacterStats : MonoBehaviour
-    {   
-        private float[] m_statAmounts;
+    public class CharacterStats
+    {
+        private readonly int[] m_statAmounts;
+        private int m_statTotal;
         
-        private void Awake()
+        public CharacterStats(int _statTotal = 100)
         {
-            var statCount = Enum.GetNames(typeof(Stats)).Length;
-            m_statAmounts = new float[statCount];
-
-            PopulateUnbalancedStatValues(statCount, out var statTotal);
-            SetStatAmounts(statTotal);
+            m_statAmounts = new int[Enum.GetNames(typeof(Stat)).Length];
+            m_statTotal = _statTotal;
+            
+            var statWeights = PopulateUnbalancedStatValues(out var statTotal);
+            SetStatAmounts(statWeights, statTotal);
         }
 
-        private void PopulateUnbalancedStatValues(int _count, out float _total)
+        public float GetStat(Stat _stat)
+            => m_statAmounts[(int) _stat];
+
+        private float[] PopulateUnbalancedStatValues(out float _total)
         {
+            var statWeights = new float[m_statAmounts.Length];
+            
             _total = 0.0f;
-            for (var i = 0; i < _count; i++)
+            for (var i = 0; i < m_statAmounts.Length; i++)
             {
-                m_statAmounts[i] = Random.Range(0.0f, 1.0f);
-                _total += m_statAmounts[i];
+                statWeights[i] = Random.Range(0.0f, 1.0f);
+                _total += statWeights[i];
             }
+
+            return statWeights;
         }
 
-        private void SetStatAmounts(float _statTotal)
+        private void SetStatAmounts(IReadOnlyList<float> _statWeights, float _weightTotal)
         {
-            for (var i = 0; i < _statTotal; i++)
+            var statTotal = 0;
+            for (var i = 0; i < m_statAmounts.Length; i++)
             {
-                m_statAmounts[i] /= _statTotal;
+                m_statAmounts[i] = Mathf.RoundToInt((_statWeights[i] / _weightTotal) * m_statTotal);
+                statTotal += m_statAmounts[i];
             }
+
+            if (statTotal == m_statTotal) { return; }
+            m_statAmounts[Random.Range(0, m_statAmounts.Length)] += m_statTotal - statTotal;
         }
     }
 }

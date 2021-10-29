@@ -1,6 +1,6 @@
 ﻿namespace Spooktober.Character
 {
-    public enum Stats
+    public enum Stat
     {
         Cool,
         Cute,

@@ -3,34 +3,78 @@
   [
     {"group": "questions_cool", "texts": 
     [
-      {"text": "Would you ever ride a MOTOR'S BIKE?", "type": "would"},
-      {"text": "How much do you like EXPLOSION?", "type": "do"},
+      {"text": "Would you ever ride MOTORCYCLE?", "type": "would"},
+      {"text": "Would you SURFBOARD?", "type": "would"},
+      {"text": "Would you go to VOLCANO?", "type": "would"},
+      {"text": "Do you like EXPLOSION?", "type": "do"},
+      {"text": "Do you like eating IRONNAIL for breakfast?", "type": "do"},
       {"text": "Can you do GUN?", "type": "can"},
-      {"text": "If you could bring one object to MOTORCYCLE, what would it be?", "type": "object"}
+      {"text": "Can you handle EXTREME?", "type": "can"},
+      {"text": "If you could bring one object to DESERT ISLAND, what would it be?", "type": "object"},
+      {"text": "What would you bring to SHOW & TELL?", "type": "object"}
     ]},
     {"group": "answers_would_cool", "texts":
     [
-      {"text": "High value in stat.", "value": 90},
-      {"text": "Medium value in stat.", "value": 50},
-      {"text": "Low value in stat.", "value": 0}
+      {"text": "HELL YEAH BROTHER!! ANY DAY!!", "value": 80},
+      {"text": "NO QUESTION! HA HA HA HA! OF COURSE!!!", "value": 80},
+      {"text": "Heh. Yeah, man.", "value": 30},
+      {"text": "Yeah, yeah, yeah! Absolutely.", "value": 30},
+      {"text": "YEAH!!!", "value": 25},
+      {"text": "Yeah!", "value": 20},
+      {"text": "Hmm... Yes!!", "value": 20},
+      {"text": "Sounds like fun.", "value": 20},
+      {"text": "Hmm... I think so...", "value": 15},
+      {"text": "That could be fun...", "value": 15},
+      {"text": "Sounds good, I guess...", "value": 15},
+      {"text": "I'd have to think about it...", "value": 10},
+      {"text": "Um... Maybe.", "value": 10},
+      {"text": "Perhaps.", "value": 10},
+      {"text": "Maybe I would. Maybe I wouldn't.", "value": 10},
+      {"text": "Oh golly... I don't know about that...", "value": 5},
+      {"text": "Uh... Um... Oh dear...", "value": 5},
+      {"text": "That would kill me.", "value": 5},
+      {"text": "Sounds... dangerous...", "value": 5},
+      {"text": "ARE YOU INSANE? DO YOU WANT ME KILLED?", "value": 5},
+      {"text": "What the hell? No! No way!!", "value": 0},
+      {"text": "A... ahh!! Ahhhh!!!", "value": 0},
+      {"text": "No. I would not.", "value": 0},
+      {"text": "Would I? No...", "value": 0},
+      {"text": "No way in hell. Not happening.", "value": 0},
+      {"text": "What the hell? No! No way!!", "value": 0},
+      {"text": "No way!", "value": 0}
     ]},
     {"group": "answers_do_cool", "texts":
     [
-      {"text": "High value in stat.", "value": 90},
-      {"text": "Medium value in stat.", "value": 50},
-      {"text": "Low value in stat.", "value": 0}
+      {"text": "OF COURSE I DO BROTHER!!!", "value": 80},
+      {"text": "Hell yeah, man!! Haha! I do!!", "value": 30},
+      {"text": "Yep. Of course I do.", "value": 25},
+      {"text": "Heh, yeah!!", "value": 20},
+      {"text": "I'd have to think about it. I... think I do...", "value": 15},
+      {"text": "I dunno...", "value": 10},
+      {"text": "No way... I don't...", "value": 5},
+      {"text": "No.", "value": 0}
     ]},
     {"group": "answers_can_cool", "texts":
     [
-      {"text": "High value in stat.", "value": 90},
-      {"text": "Medium value in stat.", "value": 50},
-      {"text": "Low value in stat.", "value": 0}
+      {"text": "HAHAHA, CAN I? I DO EVERY DAY BROTHER. HA!!!", "value": 80},
+      {"text": "Can I? Of course. I don't like to brag though, you feel me?", "value": 30},
+      {"text": "Hell yeah I can. Hell yeah.", "value": 25},
+      {"text": "Yeah, I can do that.", "value": 20},
+      {"text": "I've tried... a few times...", "value": 15},
+      {"text": "Can I? I... don't know...", "value": 10},
+      {"text": "I don't think I even WANT to...", "value": 5},
+      {"text": "No.", "value": 0}
     ]},
     {"group": "answers_object_cool", "texts":
     [
-      {"text": "HIGH.", "value": 90},
-      {"text": "MEDIUM.", "value": 50},
-      {"text": "LOW.", "value": 0}
+      {"text": "THE OBVIOUS ANSWER IS... SUNGLASS! CONVERTIBLE SUNGLASS!", "value": 80},
+      {"text": "Hmmm... how about ROCKET LAUNCHER?", "value": 30},
+      {"text": "My answer? It'd be... GUN...", "value": 25},
+      {"text": "I'm thinking BASKETBALL.", "value": 20},
+      {"text": "Probably KALEIDOSCOPE...", "value": 15},
+      {"text": "That'd be VIDEO GAME.", "value": 10},
+      {"text": "Heh, that one's easy... PROPELLER HAT!", "value": 5},
+      {"text": "I-I'm trying to think of something cool... I can't think of anything...", "value": 0}
     ]}
   ]
 }

@@ -3,34 +3,54 @@
   [
     {"group": "questions_cute", "texts": 
     [
-      {"text": "Would you ever ride a MOTOR'S BIKE?", "type": "would"},
-      {"text": "How much do you like EXPLOSION?", "type": "do"},
-      {"text": "Can you do GUN?", "type": "can"},
-      {"text": "If you could bring one object to MOTORCYCLE, what would it be?", "type": "object"}
+      {"text": "Would you ever KISS a BABYKITTEN?", "type": "would"},
+      {"text": "How much do you like MAGICAL GIRL'S?", "type": "do"},
+      {"text": "Can you SNIFF a FLOWER?", "type": "can"},
+      {"text": "object question", "type": "object"}
     ]},
     {"group": "answers_would_cute", "texts":
     [
-      {"text": "High value in stat.", "value": 90},
-      {"text": "Medium value in stat.", "value": 50},
-      {"text": "Low value in stat.", "value": 0}
+      {"text": "", "value": 80},
+      {"text": "", "value": 30},
+      {"text": "", "value": 25},
+      {"text": "", "value": 20},
+      {"text": "", "value": 15},
+      {"text": "", "value": 10},
+      {"text": "", "value": 5},
+      {"text": "", "value": 0}
     ]},
     {"group": "answers_do_cute", "texts":
     [
-      {"text": "High value in stat.", "value": 90},
-      {"text": "Medium value in stat.", "value": 50},
-      {"text": "Low value in stat.", "value": 0}
+      {"text": "", "value": 80},
+      {"text": "", "value": 30},
+      {"text": "", "value": 25},
+      {"text": "", "value": 20},
+      {"text": "", "value": 15},
+      {"text": "", "value": 10},
+      {"text": "", "value": 5},
+      {"text": "", "value": 0}
     ]},
     {"group": "answers_can_cute", "texts":
     [
-      {"text": "High value in stat.", "value": 90},
-      {"text": "Medium value in stat.", "value": 50},
-      {"text": "Low value in stat.", "value": 0}
+      {"text": "", "value": 80},
+      {"text": "", "value": 30},
+      {"text": "", "value": 25},
+      {"text": "", "value": 20},
+      {"text": "", "value": 15},
+      {"text": "", "value": 10},
+      {"text": "", "value": 5},
+      {"text": "", "value": 0}
     ]},
     {"group": "answers_object_cute", "texts":
     [
-      {"text": "HIGH.", "value": 90},
-      {"text": "MEDIUM.", "value": 50},
-      {"text": "LOW.", "value": 0}
+      {"text": "", "value": 80},
+      {"text": "", "value": 30},
+      {"text": "", "value": 25},
+      {"text": "", "value": 20},
+      {"text": "", "value": 15},
+      {"text": "", "value": 10},
+      {"text": "", "value": 5},
+      {"text": "", "value": 0}
     ]}
   ]
 }

@@ -3,34 +3,54 @@
   [
     {"group": "questions_serious", "texts": 
     [
-      {"text": "Would you ever ride a MOTOR'S BIKE?", "type": "would"},
-      {"text": "How much do you like EXPLOSION?", "type": "do"},
-      {"text": "Can you do GUN?", "type": "can"},
-      {"text": "If you could bring one object to MOTORCYCLE, what would it be?", "type": "object"}
+      {"text": "Would you ever FILE your TAXES?", "type": "would"},
+      {"text": "How much do you like BUSINESS?", "type": "do"},
+      {"text": "Can you FUNCTION according to a SCHEDULE?", "type": "can"},
+      {"text": "object question", "type": "object"}
     ]},
     {"group": "answers_would_serious", "texts":
     [
-      {"text": "High value in stat.", "value": 90},
-      {"text": "Medium value in stat.", "value": 50},
-      {"text": "Low value in stat.", "value": 0}
+      {"text": "", "value": 80},
+      {"text": "", "value": 30},
+      {"text": "", "value": 25},
+      {"text": "", "value": 20},
+      {"text": "", "value": 15},
+      {"text": "", "value": 10},
+      {"text": "", "value": 5},
+      {"text": "", "value": 0}
     ]},
     {"group": "answers_do_serious", "texts":
     [
-      {"text": "High value in stat.", "value": 90},
-      {"text": "Medium value in stat.", "value": 50},
-      {"text": "Low value in stat.", "value": 0}
+      {"text": "", "value": 80},
+      {"text": "", "value": 30},
+      {"text": "", "value": 25},
+      {"text": "", "value": 20},
+      {"text": "", "value": 15},
+      {"text": "", "value": 10},
+      {"text": "", "value": 5},
+      {"text": "", "value": 0}
     ]},
     {"group": "answers_can_serious", "texts":
     [
-      {"text": "High value in stat.", "value": 90},
-      {"text": "Medium value in stat.", "value": 50},
-      {"text": "Low value in stat.", "value": 0}
+      {"text": "", "value": 80},
+      {"text": "", "value": 30},
+      {"text": "", "value": 25},
+      {"text": "", "value": 20},
+      {"text": "", "value": 15},
+      {"text": "", "value": 10},
+      {"text": "", "value": 5},
+      {"text": "", "value": 0}
     ]},
     {"group": "answers_object_serious", "texts":
     [
-      {"text": "HIGH.", "value": 90},
-      {"text": "MEDIUM.", "value": 50},
-      {"text": "LOW.", "value": 0}
+      {"text": "", "value": 80},
+      {"text": "", "value": 30},
+      {"text": "", "value": 25},
+      {"text": "", "value": 20},
+      {"text": "", "value": 15},
+      {"text": "", "value": 10},
+      {"text": "", "value": 5},
+      {"text": "", "value": 0}
     ]}
   ]
 }

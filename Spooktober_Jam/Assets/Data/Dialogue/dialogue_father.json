@@ -3,34 +3,54 @@
   [
     {"group": "questions_father", "texts": 
     [
-      {"text": "Would you ever ride a MOTOR'S BIKE?", "type": "would"},
-      {"text": "How much do you like EXPLOSION?", "type": "do"},
-      {"text": "Can you do GUN?", "type": "can"},
-      {"text": "If you could bring one object to MOTORCYCLE, what would it be?", "type": "object"}
+      {"text": "Would you ever have CHILDREN?", "type": "would"},
+      {"text": "How much do you like SPENDING TIME with YOUR SON?", "type": "do"},
+      {"text": "Can you GRILL?", "type": "can"},
+      {"text": "object question", "type": "object"}
     ]},
     {"group": "answers_would_father", "texts":
     [
-      {"text": "High value in stat.", "value": 90},
-      {"text": "Medium value in stat.", "value": 50},
-      {"text": "Low value in stat.", "value": 0}
+      {"text": "", "value": 80},
+      {"text": "", "value": 30},
+      {"text": "", "value": 25},
+      {"text": "", "value": 20},
+      {"text": "", "value": 15},
+      {"text": "", "value": 10},
+      {"text": "", "value": 5},
+      {"text": "", "value": 0}
     ]},
     {"group": "answers_do_father", "texts":
     [
-      {"text": "High value in stat.", "value": 90},
-      {"text": "Medium value in stat.", "value": 50},
-      {"text": "Low value in stat.", "value": 0}
+      {"text": "", "value": 80},
+      {"text": "", "value": 30},
+      {"text": "", "value": 25},
+      {"text": "", "value": 20},
+      {"text": "", "value": 15},
+      {"text": "", "value": 10},
+      {"text": "", "value": 5},
+      {"text": "", "value": 0}
     ]},
     {"group": "answers_can_father", "texts":
     [
-      {"text": "High value in stat.", "value": 90},
-      {"text": "Medium value in stat.", "value": 50},
-      {"text": "Low value in stat.", "value": 0}
+      {"text": "", "value": 80},
+      {"text": "", "value": 30},
+      {"text": "", "value": 25},
+      {"text": "", "value": 20},
+      {"text": "", "value": 15},
+      {"text": "", "value": 10},
+      {"text": "", "value": 5},
+      {"text": "", "value": 0}
     ]},
     {"group": "answers_object_father", "texts":
     [
-      {"text": "HIGH.", "value": 90},
-      {"text": "MEDIUM.", "value": 50},
-      {"text": "LOW.", "value": 0}
+      {"text": "", "value": 80},
+      {"text": "", "value": 30},
+      {"text": "", "value": 25},
+      {"text": "", "value": 20},
+      {"text": "", "value": 15},
+      {"text": "", "value": 10},
+      {"text": "", "value": 5},
+      {"text": "", "value": 0}
     ]}
   ]
 }

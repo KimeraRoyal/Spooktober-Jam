@@ -985,6 +985,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Person
       objectReference: {fileID: 0}
+    - target: {fileID: 7927781709059221000, guid: 359dd9ad0b82c2644a5b8efdac08d42b, type: 3}
+      propertyPath: m_gradient.key5.r
+      value: 0.957366
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927781709059221000, guid: 359dd9ad0b82c2644a5b8efdac08d42b, type: 3}
+      propertyPath: m_gradient.key6.b
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927781709059221000, guid: 359dd9ad0b82c2644a5b8efdac08d42b, type: 3}
+      propertyPath: m_gradient.key6.g
+      value: 0.6040863
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 359dd9ad0b82c2644a5b8efdac08d42b, type: 3}
 --- !u!1001 &1353886603

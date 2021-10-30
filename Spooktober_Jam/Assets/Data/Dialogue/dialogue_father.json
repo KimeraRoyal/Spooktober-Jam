@@ -1,32 +1,32 @@
 {
   "groups" :
   [
-    {"group": "questions_cool", "texts": 
+    {"group": "questions_father", "texts": 
     [
       {"text": "Would you ever ride a MOTOR'S BIKE?", "type": "would"},
       {"text": "How much do you like EXPLOSION?", "type": "do"},
       {"text": "Can you do GUN?", "type": "can"},
       {"text": "If you could bring one object to MOTORCYCLE, what would it be?", "type": "object"}
     ]},
-    {"group": "answers_would_cool", "texts":
+    {"group": "answers_would_father", "texts":
     [
       {"text": "High value in stat.", "value": 90},
       {"text": "Medium value in stat.", "value": 50},
       {"text": "Low value in stat.", "value": 0}
     ]},
-    {"group": "answers_do_cool", "texts":
+    {"group": "answers_do_father", "texts":
     [
       {"text": "High value in stat.", "value": 90},
       {"text": "Medium value in stat.", "value": 50},
       {"text": "Low value in stat.", "value": 0}
     ]},
-    {"group": "answers_can_cool", "texts":
+    {"group": "answers_can_father", "texts":
     [
       {"text": "High value in stat.", "value": 90},
       {"text": "Medium value in stat.", "value": 50},
       {"text": "Low value in stat.", "value": 0}
     ]},
-    {"group": "answers_object_cool", "texts":
+    {"group": "answers_object_father", "texts":
     [
       {"text": "HIGH.", "value": 90},
       {"text": "MEDIUM.", "value": 50},

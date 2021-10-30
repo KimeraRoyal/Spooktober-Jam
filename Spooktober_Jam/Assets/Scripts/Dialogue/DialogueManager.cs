@@ -7,7 +7,7 @@ namespace Spooktober.Dialogue
 {
     public class DialogueManager : MonoBehaviour
     {
-        [SerializeField] private TextAsset m_dialogueTextAsset;
+        [SerializeField] private TextAsset[] m_dialogueTextAssets;
 
         private Dictionary<Stat, Questions> m_questions;
         private Dictionary<Stat, Answers> m_answers;
@@ -18,11 +18,11 @@ namespace Spooktober.Dialogue
             m_questions = new Dictionary<Stat, Questions>();
             m_answers = new Dictionary<Stat, Answers>();
             m_generalDialogue = new Dictionary<string, string>();
-            
-            var serializedDialogueFile = JsonUtility.FromJson<SerializedDialogueFile>(m_dialogueTextAsset.text);
 
-            LoadTexts(serializedDialogueFile);
-            LoadGroups(serializedDialogueFile);
+            foreach (var dialogueTextAsset in m_dialogueTextAssets)
+            {
+                LoadDialogueAsset(dialogueTextAsset);
+            }
         }
 
         public Types.Dialogue GetRandomQuestion(Stat _stat)
@@ -31,6 +31,14 @@ namespace Spooktober.Dialogue
         public string TryGetDialogue(string _id)
             => m_generalDialogue.TryGetValue(_id, out var dialogue) ? dialogue : "";
 
+        private void LoadDialogueAsset(TextAsset _dialogueAsset)
+        {
+            var serializedDialogueFile = JsonUtility.FromJson<SerializedDialogueFile>(_dialogueAsset.text);
+
+            LoadTexts(serializedDialogueFile);
+            LoadGroups(serializedDialogueFile);
+        }
+        
         private void LoadTexts(SerializedDialogueFile _serializedDialogueFile)
         {
             if (_serializedDialogueFile.Texts == null) { return;}

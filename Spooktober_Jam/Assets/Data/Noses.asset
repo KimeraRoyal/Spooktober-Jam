@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11d9542f02b54ebab82ace7b35feceb3, type: 3}
+  m_Name: Noses
+  m_EditorClassIdentifier: 
+  m_sprites:
+  - {fileID: 21300000, guid: c1ebb6d960ef63b4f88b0e1d7bbf0b18, type: 3}
+  - {fileID: 21300000, guid: 81528010100c9ff48bdf3b1ab274abb3, type: 3}
+  - {fileID: 21300000, guid: 3c7753af53860a3418e05b22b6070314, type: 3}
+  - {fileID: 21300000, guid: b49259e1b4988aa4b94e09e12ccb5282, type: 3}
+  - {fileID: 21300000, guid: ac63f1b4939ccaa4da8432075be793ab, type: 3}
+  - {fileID: 21300000, guid: 814f6e66f6e2dda40a1fe5f6f3577b5f, type: 3}
+  - {fileID: 21300000, guid: 59dc51b570949c6489aec1d8aed747aa, type: 3}

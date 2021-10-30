@@ -11,6 +11,11 @@ namespace Spooktober.Character.People
         
         private void Awake()
         {
+            Generate();
+        }
+
+        void Generate()
+        {
             m_personMaker = FindObjectOfType<PersonMaker>();
 
             m_spriteRenderer = GetComponent<SpriteRenderer>();

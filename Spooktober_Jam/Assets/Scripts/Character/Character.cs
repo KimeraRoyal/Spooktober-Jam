@@ -23,6 +23,11 @@ namespace Spooktober.Character
 
         private void Awake()
         {
+            Generate();
+        }
+
+        void Generate()
+        {
             CharacterStats = new CharacterStats();
             cool = CharacterStats.GetStat(Stat.Cool);
             cute = CharacterStats.GetStat(Stat.Cute);

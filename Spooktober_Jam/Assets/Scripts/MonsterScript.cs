@@ -7,6 +7,7 @@ namespace Spooktober.Character
     public class MonsterScript : MonoBehaviour
     {
         public float randomness = 5;
+        public GameObject monst;
 
         public float monsterIndex = 0;
         public GameObject monster0;
@@ -36,29 +37,26 @@ namespace Spooktober.Character
         // Start is called before the first frame update
         void Start()
         {
+            monst = null;
             InitiateMonster();
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
-
-        void InitiateMonster()
+        public void InitiateMonster()
         {
             monsterIndex = Mathf.Round(Random.Range(-0.4f, 1.9f));
+
+            if (monst != null) Destroy(monst);
             if (monsterIndex == 0)
             {
-                var monst = Instantiate(monster0, transform);
+                monst = Instantiate(monster0, transform);
             }
             else if (monsterIndex == 1)
             {
-                var monst = Instantiate(monster1, transform);
+                monst = Instantiate(monster1, transform);
             }
             else if (monsterIndex == 2)
             {
-                var monst = Instantiate(monster2, transform);
+                monst = Instantiate(monster2, transform);
             }
 
             people = GameObject.FindGameObjectsWithTag("Player");

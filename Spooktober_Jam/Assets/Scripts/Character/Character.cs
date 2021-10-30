@@ -8,6 +8,13 @@ namespace Spooktober.Character
 
         public string CharacterName => m_characterName;
 
+        public float cool;
+        public float cute;
+        public float serious;
+        public float childish;
+        public float cynical;
+        public float father;
+
         public CharacterStats CharacterStats
         {
             get;
@@ -17,6 +24,12 @@ namespace Spooktober.Character
         private void Awake()
         {
             CharacterStats = new CharacterStats();
+            cool = CharacterStats.GetStat(Stat.Cool);
+            cute = CharacterStats.GetStat(Stat.Cute);
+            serious = CharacterStats.GetStat(Stat.Serious);
+            childish = CharacterStats.GetStat(Stat.Childish);
+            cynical = CharacterStats.GetStat(Stat.Cynical);
+            father = CharacterStats.GetStat(Stat.Father);
         }
     }
 }

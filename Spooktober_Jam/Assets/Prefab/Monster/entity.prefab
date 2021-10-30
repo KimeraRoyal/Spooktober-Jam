@@ -143,6 +143,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_characterName: Entity
+  cool: 0
+  cute: 0
+  serious: 0
+  childish: 0
+  cynical: 0
+  father: 0
 --- !u!1 &4376507281903958743
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,6 +327,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 368056a1c4094d340b5e06499cfc5c7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_shakeDistance: {x: 0.75, y: 0.5, z: 0}
-  m_shakeAmount: 0.05
-  m_shakeLength: 1
+  m_shakeDistance: {x: 1.5, y: 0.75, z: 0}
+  m_shakeAmount: 0.035
+  m_shakeLength: 5

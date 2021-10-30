@@ -1,5 +1,5 @@
 using UnityEngine;
-namespace Spooktober.Transform
+namespace Spooktober.Visuals
 {
     public class ScaleModulator : MonoBehaviour, IIsSeeded, IHasAdjustableRate
     {

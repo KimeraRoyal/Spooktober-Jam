@@ -1,4 +1,4 @@
-﻿namespace Spooktober.Transform
+﻿namespace Spooktober.Visuals
 {
     public interface IHasAdjustableRate
     {

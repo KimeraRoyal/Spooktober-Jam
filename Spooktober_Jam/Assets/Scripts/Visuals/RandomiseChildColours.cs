@@ -1,6 +1,5 @@
 using UnityEngine;
-
-namespace Spooktober
+namespace Spooktober.Visuals
 {
     public class RandomiseChildColours : MonoBehaviour
     {

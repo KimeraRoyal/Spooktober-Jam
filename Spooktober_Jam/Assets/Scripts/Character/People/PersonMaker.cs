@@ -1,10 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
-namespace Spooktober.Character
+namespace Spooktober.Character.People
 {
     public class PersonMaker : MonoBehaviour
     {

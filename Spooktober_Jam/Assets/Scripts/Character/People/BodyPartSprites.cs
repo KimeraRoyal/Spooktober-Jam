@@ -1,6 +1,5 @@
-﻿using Sirenix.OdinInspector;
-using UnityEngine;
-namespace Spooktober.Character
+﻿using UnityEngine;
+namespace Spooktober.Character.People
 {
     [CreateAssetMenu(fileName = "New Body Part Sprites", menuName = "Spooktober/Body Part Sprites")]
     public class BodyPartSprites : ScriptableObject

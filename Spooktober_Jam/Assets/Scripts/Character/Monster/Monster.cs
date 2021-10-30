@@ -1,5 +1,4 @@
-using UnityEngine;
-namespace Spooktober.Character
+namespace Spooktober.Character.Monster
 {
     public class Monster : Character
     {

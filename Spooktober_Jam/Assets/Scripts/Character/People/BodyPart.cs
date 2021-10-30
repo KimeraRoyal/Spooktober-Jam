@@ -1,5 +1,5 @@
 ﻿using Sirenix.OdinInspector;
-namespace Spooktober.Character
+namespace Spooktober.Character.People
 {
     [EnumToggleButtons]
     public enum BodyPart

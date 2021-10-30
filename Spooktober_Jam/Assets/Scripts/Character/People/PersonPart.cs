@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-namespace Spooktober.Character
+namespace Spooktober.Character.People
 {
     public class PersonPart : MonoBehaviour
     {

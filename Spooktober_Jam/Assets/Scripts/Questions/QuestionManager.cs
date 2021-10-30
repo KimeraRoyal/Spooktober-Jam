@@ -24,6 +24,8 @@ namespace Spooktober
         
         private int m_count;
 
+        public int RemainingQuestions => m_maxQuestions - m_count;
+
         private void Awake()
         {
             m_dialogueManager = FindObjectOfType<DialogueManager>();
@@ -32,11 +34,6 @@ namespace Spooktober
             for (var i = 0; i < m_statWeights.Length; i++)
             {
                 m_statWeights[i] = 1.0f;
-            }
-
-            for (var i = 0; i < m_maxQuestions; i++)
-            {
-                OfferQuestions();
             }
         }
 

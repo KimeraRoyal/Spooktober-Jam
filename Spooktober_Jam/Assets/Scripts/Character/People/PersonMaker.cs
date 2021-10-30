@@ -4,8 +4,6 @@ namespace Spooktober.Character.People
 {
     public class PersonMaker : MonoBehaviour
     {
-        [SerializeField] private GameObject m_personPrefab;
-
         [SerializeField] private BodyPartSprites[] m_bodyPartSprites;
 
         public Sprite GetBodySprite(int _index)

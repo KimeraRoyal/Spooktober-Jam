@@ -1,0 +1,18 @@
+{
+  "groups" :
+  [
+    {"group": "questions_cool", "texts": 
+    [
+      {"text": "Would you ever ride a MOTOR'S BIKE?", "type": "would"},
+      {"text": "How much do you like EXPLOSION?", "type": "do"},
+      {"text": "Can you do GUN?", "type": "can"},
+      {"text": "If you could bring one object to MOTORCYCLE, what would it be?", "type": "object"}
+    ]},
+    {"group": "answers_would_cool", "texts":
+    [
+      {"text": "HELL YEAH!!! Forever!!! WOO!!!", "value": 90},
+      {"text": "Yeah, I mean, maybe!", "value": 50},
+      {"text": "NO WAY BROTHER !NEVER!", "value": 0}
+    ]}
+  ]
+}

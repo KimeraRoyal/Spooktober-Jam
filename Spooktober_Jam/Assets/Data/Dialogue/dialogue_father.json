@@ -4,9 +4,13 @@
     {"group": "questions_father", "texts": 
     [
       {"text": "Would you ever have CHILDREN?", "type": "would"},
+      {"text": "Would you FISHING BY THE LAKE?", "type": "would"},
       {"text": "How much do you like SPENDING TIME with YOUR SON?", "type": "do"},
+      {"text": "Do you like TRANSMIT INHERITANCE?", "type": "do"},
       {"text": "Can you GRILL?", "type": "can"},
-      {"text": "object question", "type": "object"}
+      {"text": "Can you of the WATCH FAMILY GROW UP?", "type": "can"},
+      {"text": "What would you pass onto your NEXT OF KIN?", "type": "object"},
+      {"text": "What is your highest rated FAMILY HEIRLOOM?", "type": "object"}
     ]},
     {"group": "answers_would_father", "texts":
     [
@@ -43,7 +47,7 @@
     ]},
     {"group": "answers_object_father", "texts":
     [
-      {"text": "", "value": 80},
+      {"text": "NEWBORN", "value": 80},
       {"text": "", "value": 30},
       {"text": "", "value": 25},
       {"text": "", "value": 20},

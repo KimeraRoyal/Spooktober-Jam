@@ -1,6 +1,11 @@
 {
   "texts" :
   [
-    {"id": "test", "text": "Just some text :^)"}
+    {"id": "stat_cool", "text": "COOL"},
+    {"id": "stat_cute", "text": "CUTE"},
+    {"id": "stat_serious", "text": "BUSINESSLIKE"},
+    {"id": "stat_childish", "text": "CHILDISH"},
+    {"id": "stat_cynical", "text": "CYNICAL"},
+    {"id": "stat_father", "text": "FATHER"}
   ]
 }

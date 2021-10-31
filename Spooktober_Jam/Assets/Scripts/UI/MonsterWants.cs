@@ -25,7 +25,6 @@ namespace Spooktober.UI
 
         public void UpdateText(string _id, int _count = 0, Action _onFinished = null)
         {
-            Debug.Log("ID: " + _id + " COUNT: " + _count);
             if(_count < 1)
             {
                 m_dialogueBox.WriteText(FormatString(_id));
@@ -37,21 +36,17 @@ namespace Spooktober.UI
                 {
                     lines[i] = FormatString(_id + "_" + i);
                 }
-                m_dialogueBox.WriteText(lines, _onFinished: _onFinished);
+                m_dialogueBox.WriteText(lines, -1, _onFinished );
             }
         }
 
         private string FormatString(string _id)
         {
-            Debug.Log(_id);
-            
             var monsterText = m_dialogueManager.TryGetDialogue(_id);
             var loveName = m_dialogueManager.GetStatName(m_monsterScript.loves);
             var likeName = m_dialogueManager.GetStatName(m_monsterScript.likes);
             var hateName = m_dialogueManager.GetStatName(m_monsterScript.hates);
             var specialName = m_dialogueManager.GetStatName(m_monsterScript.special);
-           
-            Debug.Log(monsterText);
 
             return string.Format(monsterText, loveName, likeName, hateName, specialName);
         }

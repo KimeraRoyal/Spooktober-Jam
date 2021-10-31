@@ -124,7 +124,7 @@ namespace Spooktober.Character
 
             var monster = monst.GetComponent<Monster.Monster>();
             
-            var monsterSeen = false;
+            /*var monsterSeen = false;
             if (!monster0seen && monsterIndex == 0)
             {
                 monster0seen = true;
@@ -143,9 +143,16 @@ namespace Spooktober.Character
             }
             
             if (!monsterSeen)
+            {*/
+            if(!monster0seen)
             {
+                monster0seen = true;
                 m_introBegin?.Invoke();
                 introDialogue.UpdateText("intro_" + monsterName, monster.IntroDialogueLines, IntroOver);
+            }
+            else
+            {
+                wantDialogue.UpdateText("type_" + (mode ? "b" : "a") + "_" + monsterName + Random.Range(0, 2));
             }
         }
 

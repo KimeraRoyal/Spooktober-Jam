@@ -123,6 +123,218 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &2225951
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1884495752}
+    m_Modifications:
+    - target: {fileID: 4182988832028895333, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283408, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_Name
+      value: Person Dialogue Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283414, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283414, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283414, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+--- !u!224 &2225952 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+  m_PrefabInstance: {fileID: 2225951}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2225956 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5287936526410283412, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
+  m_PrefabInstance: {fileID: 2225951}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55314f27bef4c3d409f2abfad8c661fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &40260968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 40260970}
+  - component: {fileID: 40260969}
+  m_Layer: 0
+  m_Name: AnswerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &40260969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40260968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b5438ba03a34f37b851ee5952b882ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_peopleDialogueBox: {fileID: 2225956}
+  m_answersFinished:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1071719399}
+        m_TargetAssemblyTypeName: Spooktober.UI.TweenableUIElement, Assembly-CSharp
+        m_MethodName: SetEnabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 729465812}
+        m_TargetAssemblyTypeName: Spooktober.QuestionManager, Assembly-CSharp
+        m_MethodName: OfferQuestions
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1477871528}
+        m_TargetAssemblyTypeName: Spooktober.QuestionCount, Assembly-CSharp
+        m_MethodName: UpdateCounter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!4 &40260970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40260968}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -240, y: -135, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_Children: []
+  m_Father: {fileID: 1884495752}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &43232213
 GameObject:
   m_ObjectHideFlags: 0
@@ -5201,6 +5413,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1720172934129162683, guid: 359dd9ad0b82c2644a5b8efdac08d42b, type: 3}
+      propertyPath: m_dialogueBox
+      value: 
+      objectReference: {fileID: 2225956}
     - target: {fileID: 1118486122752350283, guid: 359dd9ad0b82c2644a5b8efdac08d42b, type: 3}
       propertyPath: m_LocalAABB.m_Center.x
       value: 0.0004963875
@@ -5721,7 +5937,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5287936526410283408, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
       propertyPath: m_Name
-      value: Dialogue Box
+      value: Monster Dialogue Box
       objectReference: {fileID: 0}
     - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
       propertyPath: m_Pivot.x
@@ -5733,7 +5949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5287936526410283415, guid: dcf63b1d4d13a1e4d8df425fd1fc8400, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5896,6 +6112,48 @@ MonoBehaviour:
   m_offeredStatMultiplier: 0.9
   m_chosenStatMultiplier: 0.5
   m_maxRerolls: 10
+  m_clickQuestionEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1071719399}
+        m_TargetAssemblyTypeName: Spooktober.UI.TweenableUIElement, Assembly-CSharp
+        m_MethodName: SetEnabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 729465813}
+        m_TargetAssemblyTypeName: Spooktober.QuestionButtonSpawner, Assembly-CSharp
+        m_MethodName: SpawnQuestionButtons
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_countFullEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1405705707}
+        m_TargetAssemblyTypeName: Spooktober.UI.TweenableUIElement, Assembly-CSharp
+        m_MethodName: SetEnabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &729465813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6296,6 +6554,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1720172934129162683, guid: 359dd9ad0b82c2644a5b8efdac08d42b, type: 3}
+      propertyPath: m_dialogueBox
+      value: 
+      objectReference: {fileID: 2225956}
     - target: {fileID: 1118486122752350283, guid: 359dd9ad0b82c2644a5b8efdac08d42b, type: 3}
       propertyPath: m_LocalAABB.m_Center.x
       value: 0.0004963875
@@ -6381,6 +6643,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1720172934129162683, guid: 359dd9ad0b82c2644a5b8efdac08d42b, type: 3}
+      propertyPath: m_dialogueBox
+      value: 
+      objectReference: {fileID: 2225956}
     - target: {fileID: 1118486122752350283, guid: 359dd9ad0b82c2644a5b8efdac08d42b, type: 3}
       propertyPath: m_LocalAABB.m_Center.x
       value: 0.0004963875
@@ -6466,6 +6732,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1720172934129162683, guid: 359dd9ad0b82c2644a5b8efdac08d42b, type: 3}
+      propertyPath: m_dialogueBox
+      value: 
+      objectReference: {fileID: 2225956}
     - target: {fileID: 1118486122752350283, guid: 359dd9ad0b82c2644a5b8efdac08d42b, type: 3}
       propertyPath: m_LocalAABB.m_Center.x
       value: 0.0004963875
@@ -6567,6 +6837,8 @@ GameObject:
   - component: {fileID: 1405705706}
   - component: {fileID: 1405705705}
   - component: {fileID: 1405705704}
+  - component: {fileID: 1405705707}
+  - component: {fileID: 1405705708}
   m_Layer: 5
   m_Name: Questions
   m_TagString: Untagged
@@ -6639,26 +6911,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1071719399}
-        m_TargetAssemblyTypeName: Spooktober.UI.TweenableUIElement, Assembly-CSharp
-        m_MethodName: SetEnabled
-        m_Mode: 6
+      - m_Target: {fileID: 729465812}
+        m_TargetAssemblyTypeName: Spooktober.QuestionManager, Assembly-CSharp
+        m_MethodName: ClickQuestions
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 729465813}
-        m_TargetAssemblyTypeName: Spooktober.QuestionButtonSpawner, Assembly-CSharp
-        m_MethodName: SpawnQuestionButtons
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6701,6 +6961,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1405705702}
   m_CullTransparentMesh: 1
+--- !u!114 &1405705707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405705702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbc9a597b04919d46a69dcbad52fa27e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_closedHeight: {x: -160, y: 0}
+  m_openHeight: {x: 0, y: 38}
+  m_resizeTime: 0.3
+  m_enabled: 1
+--- !u!114 &1405705708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405705702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1001 &1444633703
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6708,6 +6997,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1720172934129162683, guid: 359dd9ad0b82c2644a5b8efdac08d42b, type: 3}
+      propertyPath: m_dialogueBox
+      value: 
+      objectReference: {fileID: 2225956}
     - target: {fileID: 1118486122752350283, guid: 359dd9ad0b82c2644a5b8efdac08d42b, type: 3}
       propertyPath: m_LocalAABB.m_Center.x
       value: 0.0004963875
@@ -6793,6 +7086,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1720172934129162683, guid: 359dd9ad0b82c2644a5b8efdac08d42b, type: 3}
+      propertyPath: m_dialogueBox
+      value: 
+      objectReference: {fileID: 2225956}
     - target: {fileID: 1118486122752350283, guid: 359dd9ad0b82c2644a5b8efdac08d42b, type: 3}
       propertyPath: m_LocalAABB.m_Center.x
       value: 0.0004963875
@@ -7219,6 +7516,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1720172934129162683, guid: 359dd9ad0b82c2644a5b8efdac08d42b, type: 3}
+      propertyPath: m_dialogueBox
+      value: 
+      objectReference: {fileID: 2225956}
     - target: {fileID: 1118486122752350283, guid: 359dd9ad0b82c2644a5b8efdac08d42b, type: 3}
       propertyPath: m_LocalAABB.m_Center.x
       value: 0.0004963875
@@ -7530,7 +7831,9 @@ RectTransform:
   - {fileID: 833422160}
   - {fileID: 1071719398}
   - {fileID: 729465811}
+  - {fileID: 40260970}
   - {fileID: 718953749}
+  - {fileID: 2225952}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

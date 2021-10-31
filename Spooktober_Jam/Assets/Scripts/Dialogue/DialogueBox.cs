@@ -34,6 +34,8 @@ namespace Spooktober.Dialogue
 
         private bool m_active;
 
+        public bool Active => m_active;
+
         private void Awake()
         {
             m_dialogueManager = FindObjectOfType<DialogueManager>();
@@ -52,9 +54,11 @@ namespace Spooktober.Dialogue
             foreach (var dialogue in _dialogues)
             {
                 yield return WriteTextCoroutine(dialogue, false);
+                m_active = true;
                 if (_delay > 0.0f) yield return new WaitForSeconds(_delay);
                 else yield return new WaitUntil(() => Input.anyKeyDown);
             }
+            m_active = false;
             _onFinished?.Invoke();
         }
 

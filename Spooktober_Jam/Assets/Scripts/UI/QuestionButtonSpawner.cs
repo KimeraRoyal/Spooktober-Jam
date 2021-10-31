@@ -36,7 +36,7 @@ namespace Spooktober
             var startingOffset = m_questionButtonOffset * (_count - 1) / 2.0f;
             for (var i = 0; i < _count; i++)
             {
-                m_currentButtonElements[i] = GetQuestionButton(new Vector2(0, startingOffset - m_questionButtonOffset * i));
+                m_currentButtonElements[i] = GetQuestionButton(new Vector2(0, startingOffset - m_questionButtonOffset * i), i);
             }
             PlayButtonSequence(true);
         }
@@ -68,9 +68,10 @@ namespace Spooktober
             }
         }
         
-        private QuestionButton GetQuestionButton(Vector2 _position)
+        private QuestionButton GetQuestionButton(Vector2 _position, int _id)
         {
             var button = m_inactiveButtons.Count > 0 ? m_inactiveButtons.Dequeue() : Instantiate(m_questionButtonPrefab, transform).GetComponent<QuestionButton>();
+            button.m_id = _id;
             
             var buttonTransform = button.GetComponent<RectTransform>();
             buttonTransform.anchoredPosition = _position;

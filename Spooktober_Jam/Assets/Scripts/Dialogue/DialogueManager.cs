@@ -9,19 +9,19 @@ namespace Spooktober.Dialogue
     {
         [SerializeField] private TextAsset[] m_dialogueTextAssets;
 
-        private Dictionary<Stat, Questions> m_questions;
+        private Dictionary<Stat, Types.Questions> m_questions;
         private Dictionary<Stat, Answers> m_answers;
         
-        private Dictionary<Stat, Questions> m_statNames;
+        private Dictionary<Stat, Types.Questions> m_statNames;
 
         private Dictionary<string, WinDialogues> m_winDialogues;
         private Dictionary<string, string> m_generalDialogue;
 
         private void Awake()
         {
-            m_questions = new Dictionary<Stat, Questions>();
+            m_questions = new Dictionary<Stat, Types.Questions>();
             m_answers = new Dictionary<Stat, Answers>();
-            m_statNames = new Dictionary<Stat, Questions>();
+            m_statNames = new Dictionary<Stat, Types.Questions>();
 
             m_winDialogues = new Dictionary<string, WinDialogues>();
             m_generalDialogue = new Dictionary<string, string>();
@@ -92,13 +92,13 @@ namespace Spooktober.Dialogue
                 switch (groupName[0])
                 {
                     case "questions":
-                        m_questions.Add((Stat) groupStat, new Questions(group.Texts));
+                        m_questions.Add((Stat) groupStat, new Types.Questions(group.Texts));
                         break;
                     case "answers":
                         TryGetAnswers((Stat) groupStat).AddAnswers(group.Texts, groupName[1]);
                         break;
                     case "stat":
-                        m_statNames.Add((Stat) groupStat, new Questions(group.Texts));
+                        m_statNames.Add((Stat) groupStat, new Types.Questions(group.Texts));
                         break;
                     case "win":
                         m_winDialogues.Add(groupName[1], new WinDialogues(group.Texts));

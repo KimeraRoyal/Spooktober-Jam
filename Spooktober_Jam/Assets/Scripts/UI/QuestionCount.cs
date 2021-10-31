@@ -26,7 +26,7 @@ namespace Spooktober
             UpdateCounter();
         }
 
-        private void UpdateCounter()
+        public void UpdateCounter()
         {
             m_textMeshProText.text = string.Format(m_counterText, m_questionManager.RemainingQuestions);
         }

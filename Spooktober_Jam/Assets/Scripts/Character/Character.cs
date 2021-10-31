@@ -33,7 +33,7 @@ namespace Spooktober.Character
             private set;
         }
 
-        private void Awake()
+        protected virtual void Awake()
         {
             Generate();
         }

@@ -1,0 +1,84 @@
+{
+  "groups" :
+  [
+    {"group": "intro_gnome", "texts": 
+    [
+      {"text": "Greetings. I am a DEMON."},
+      {"text": "I am here to ask a favour of you."},
+      {"text": "You see, I require HUMAN SOULS..."},
+      {"text": "To power my HELLFIRE LAWNMOWER."},
+      {"text": "And then... THEN..."},
+      {"text": "I'll be the talk of the goddamn town."},
+      {"text": "So, you wanna help me out?"}
+    ]},
+    {"group": "intro_beholder", "texts":
+    [
+      {"text": "YOU! YOU!!!"},
+      {"text": "Listen you have got to help me."},
+      {"text": "We are sooo short staffed down at the office in"},
+      {"text": "hell."},
+      {"text": "We need RECRUITS!! And if you don't help me find some..."},
+      {"text": "I'll lose my job! PLEASE!! I'M BEGGING YOU!!!"}
+    ]},
+    {"group": "intro_entity", "texts":
+    [
+      {"text": "YOU HAVE BEEN MAKING DEALS."},
+      {"text": "YOU WILL OFFER HUMAN SOULS."},
+      {"text": "IN EXCHANGE FOR A CHANCE TO CONTINUE."},
+      {"text": "THIS IS NOT AN UNFAIR DEAL."},
+      {"text": "IF YOU FAIL... YOUR TIME WILL BE CUT SHORT."},
+      {"text": "CHOOSE WISELY."}
+    ]},
+    {"group": "type_a_gnome", "texts":
+    [
+      {"text": "My LAWNMOWER would get PUMPED UP from a soul that's <loves> and <likes>. Maybe even <special>, too."},
+      {"text": "It would be so awesome if you got me a <loves> and <likes> soul. I'll throw in bonus points for <special>."}
+    ]},
+    {"group": "type_b_gnome", "texts":
+    [
+      {"text": "You have GOT to get my LAWNMOWER a soul that's <loves>, but no way will I take a <hates> one..."},
+      {"text": "I'm feeling something <loves>... But I would NOT want to see ANYTHING that's <hates> right now."}
+    ]},
+    {"group": "type_a_beholder", "texts":
+    [
+      {"text": "Please. Please. I need someone who's <loves> and <likes>. Please..."},
+      {"text": "Someone <loves> and <likes> would be GREAT for out work environment..."}
+    ]},
+    {"group": "type_b_beholder", "texts":
+    [
+      {"text": "Someone <loves>, but not <hates>! That's what the boss is looking for!"},
+      {"text": "PLEASE... I need someone <loves>... But if they're <hates> my boss will KILL me! LITERALLY!!"}
+    ]},
+    {"group": "type_a_entity", "texts":
+    [
+      {"text": "IT MUST BE <loves>. IT MUST BE <likes>."},
+      {"text": "BRING ONE THAT IS <loves>, BUT ALSO <likes>."}
+    ]},
+    {"group": "type_b_entity", "texts":
+    [
+      {"text": "IT MUST BE <loves>. IT MUST NOT BE <hates>."},
+      {"text": "ONE THAT IS <loves>, ONE THAT IS NOT <hates>. BRING THIS."}
+    ]},
+    {"group": "win_entity", "texts":
+    [
+      {"text": "YES. YOU MAY CONTINUE.", "value": 40}
+      {"text": "THIS IS UNACCEPTABLE. YOUR EXPERIENCE ENDS.", "value": 0}
+    ]},
+    {"group": "win_gnome", "texts":
+    [
+      {"text": "This right here... Is PERFECT LAWNMOWER FUEL... Thank you so much.", "value": 90},
+      {"text": "Oh my LAWNMOWER is gonna love this.", "value": 70},
+      {"text": "Thanks dude. Alright!!", "value": 50}
+      {"text": "What the hell, man? What the hell is this?", "value": 20},
+      {"text": "What's your problem? You wanna KILL my LAWNMOWER? Huh? Whatever...", "value": 0}
+    ]},
+    {"group": "win_beholder", "texts":
+    [
+      {"text": "YES! THANK YOU!! THEY'RE PERFECT!!",  "value": 90},
+      {"text": "This is GREAT... YES!", "value": 70},
+      {"text": "Good! Good! Yeah! They'll do!", "value": 50},
+      {"text": "NO!!! THAT'S WRONG!!! THAT'S NOT THE KIND OF PERSON I WANTED AT ALL!!!", "value": 20},
+      {"text": "Do you want me to lose my job? Is that it. I see how it is.", "value": 0}
+    ]}
+  ]
+}

@@ -28,6 +28,10 @@ namespace Spooktober.Character
         public string special;
         private string pref;
 
+        private bool monster0seen = false;
+        private bool monster1seen = false;
+        private bool monster2seen = false;
+
         public CharacterStats CharacterStats
         {
             get;
@@ -84,6 +88,20 @@ namespace Spooktober.Character
                     if (tity == 5) special = "cynical";
                     if (tity == 6) special = "father";
                 }
+            }
+
+            ///IMPORTANT!IMPORTANT!IMPORTANT!IMPORTANT!IMPORTANT!IMPORTANT!IMPORTANT!IMPORTANT!IMPORTANT!IMPORTANT!IMPORTANT!IMPORTANT!
+            ///PUT THE MONSTER DIALOG INTRODUCTIONS HERE
+            ///
+            if (!monster0seen && monsterIndex == 0)
+            {
+                monster0seen = true;
+            } else if (!monster1seen && monsterIndex == 1)
+            {
+                monster1seen = true;
+            } else if (!monster2seen && monsterIndex == 2)
+            {
+                monster2seen = true;
             }
         }
 

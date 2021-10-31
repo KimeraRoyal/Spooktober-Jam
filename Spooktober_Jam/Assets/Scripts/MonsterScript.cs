@@ -128,24 +128,32 @@ namespace Spooktober.Character
             if (!monster0seen && monsterIndex == 0)
             {
                 monster0seen = true;
+                m_introBegin?.Invoke();
+                introDialogue.UpdateText("intro_" + monsterName, monster.IntroDialogueLines, IntroOver);
             }
             else if (!monster1seen && monsterIndex == 1)
             {
                 monster1seen = true;
+                m_introBegin?.Invoke();
+                introDialogue.UpdateText("intro_" + monsterName, monster.IntroDialogueLines, IntroOver);
             }
             else if (!monster2seen && monsterIndex == 2)
             {
                 monster2seen = true;
+                m_introBegin?.Invoke();
+                introDialogue.UpdateText("intro_" + monsterName, monster.IntroDialogueLines, IntroOver);
             }
             else
             {
                 monsterSeen = true;
+                m_introBegin?.Invoke();
+                introDialogue.UpdateText("intro_" + monsterName, monster.IntroDialogueLines, IntroOver);
             }
             
             if (!monsterSeen)
             {
-                m_introBegin?.Invoke();
-                introDialogue.UpdateText("intro_" + monsterName, monster.IntroDialogueLines, IntroOver);
+                //m_introBegin?.Invoke();
+                //introDialogue.UpdateText("intro_" + monsterName, monster.IntroDialogueLines, IntroOver);
             }
         }
 

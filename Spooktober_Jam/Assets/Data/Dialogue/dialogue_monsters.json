@@ -61,14 +61,14 @@
     ]},
     {"group": "win_entity", "texts":
     [
-      {"text": "YES. YOU MAY CONTINUE.", "value": 40}
+      {"text": "YES. YOU MAY CONTINUE.", "value": 40},
       {"text": "THIS IS UNACCEPTABLE. YOUR EXPERIENCE ENDS.", "value": 0}
     ]},
     {"group": "win_gnome", "texts":
     [
       {"text": "This right here... Is PERFECT LAWNMOWER FUEL... Thank you so much.", "value": 90},
       {"text": "Oh my LAWNMOWER is gonna love this.", "value": 70},
-      {"text": "Thanks dude. Alright!!", "value": 50}
+      {"text": "Thanks dude. Alright!!", "value": 50},
       {"text": "What the hell, man? What the hell is this?", "value": 20},
       {"text": "What's your problem? You wanna KILL my LAWNMOWER? Huh? Whatever...", "value": 0}
     ]},

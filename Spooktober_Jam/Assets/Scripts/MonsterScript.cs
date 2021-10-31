@@ -47,7 +47,7 @@ namespace Spooktober.Character
 
         public void InitiateMonster()
         {
-            monsterIndex = Mathf.Round(Random.Range(-0.4f, 1.9f));
+            monsterIndex = Mathf.Round(Random.Range(-0.4f, 1.8f));
 
             if (monst != null) Destroy(monst);
             if (monsterIndex == 0)

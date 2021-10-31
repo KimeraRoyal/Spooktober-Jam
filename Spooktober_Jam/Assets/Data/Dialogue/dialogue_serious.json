@@ -55,7 +55,7 @@
       {"text": "I choose SALES.", "value": 30},
       {"text": "How about MONEY?", "value": 25},
       {"text": "I guess... I'd have to pick TAX RETURNS...", "value": 20},
-      {"text": "I don't know... Uh, WALLET??", "value": 10},
+      {"text": "I don't know... Uh, WALLET??", "value": 10}
     ]}
   ]
 }

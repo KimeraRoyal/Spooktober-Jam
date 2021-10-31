@@ -46,8 +46,9 @@ namespace Spooktober.Character
         private bool monster1seen = false;
         private bool monster2seen = false;
 
+        public UnityEvent m_introBegin;
         public UnityEvent m_introOver;
-        
+
         public CharacterStats CharacterStats
         {
             get;
@@ -143,6 +144,7 @@ namespace Spooktober.Character
             
             if (!monsterSeen)
             {
+                m_introBegin?.Invoke();
                 m_monsterWants.UpdateText("intro_" + monsterName, monster.IntroDialogueLines, () => m_introOver?.Invoke());
             }
         }

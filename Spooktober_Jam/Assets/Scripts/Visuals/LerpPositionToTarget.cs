@@ -24,8 +24,14 @@ namespace Spooktober.Visuals
             m_startingPosition = transform.position;
         }
 
+        public void ClearTarget()
+            => Target = null;
+
         public void SetTarget(Transform _target)
             => Target = _target;
+
+        public void SetSmoothTime(float _time)
+            => m_smoothTime = _time;
 
         private void Update()
         {

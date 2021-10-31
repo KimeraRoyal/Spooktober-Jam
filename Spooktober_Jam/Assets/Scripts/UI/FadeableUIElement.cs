@@ -9,7 +9,7 @@ namespace Spooktober.UI
 {
     public class FadeableUIElement : MonoBehaviour
     {
-        private Image m_image;
+        private SpriteRenderer m_image;
 
         [SerializeField] private Color m_closedColor, m_openColor;
         [SerializeField] private float m_fadeTime;
@@ -28,7 +28,7 @@ namespace Spooktober.UI
 
         protected virtual void Awake()
         {
-            m_image = GetComponent<Image>();
+            m_image = GetComponent<SpriteRenderer>();
 
             m_wasEnabled = m_enabled;
         }

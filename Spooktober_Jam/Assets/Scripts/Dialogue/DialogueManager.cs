@@ -28,6 +28,9 @@ namespace Spooktober.Dialogue
         public Types.Dialogue GetRandomQuestion(Stat _stat)
             => m_questions[_stat].GetRandomQuestion();
 
+        public Answer GetAnswer(Stat _stat, string _type, CharacterStats _characterStats)
+            => m_answers[_stat].GetAnswer(_stat, _type, _characterStats);
+
         public string TryGetDialogue(string _id)
             => m_generalDialogue.TryGetValue(_id, out var dialogue) ? dialogue : "";
 
@@ -76,10 +79,22 @@ namespace Spooktober.Dialogue
                         m_questions.Add((Stat) groupStat, new Questions(group.Texts));
                         break;
                     case "answers":
-                        m_answers.Add((Stat) groupStat, new Answers(group.Texts, groupName[1]));
+                        TryGetAnswers((Stat) groupStat).AddAnswers(group.Texts, groupName[1]);
                         break;
                 }
             }
+        }
+
+        private Answers TryGetAnswers(Stat _stat)
+        {
+            if (m_answers.TryGetValue(_stat, out var value))
+            {
+                return value;
+            }
+
+            value = new Answers();
+            m_answers.Add(_stat, value);
+            return value;
         }
     }
 }

@@ -4,10 +4,16 @@
     {"group": "questions_cynical", "texts": 
     [
       {"text": "Would you ever FALL IN LOVE with the BEAUTY OF THE WORLD?", "type": "would"},
+      {"text": "Would you ever CONNECT with another PERSON?", "type": "would"},
+      {"text": "Would you LIKE to MAKE FRIEND?", "type": "would"},
       {"text": "Do you like HUMAN BEINGS?", "type": "do"},
+      {"text": "Do you like HAVE FUN often?", "type": "do"},
       {"text": "Do you often BASK in SUNSHINE and POSITITY?", "type": "do"},
       {"text": "Can you FEEL genuine emotion?", "type": "can"},
-      {"text": "What's the most important thing?", "type": "object"}
+      {"text": "Can you experience SIMPLE HAPPINESS?", "type": "can"},
+      {"text": "Can you imagine a BETTER WORLD?", "type": "can"},
+      {"text": "What's the most important THING?", "type": "object"},
+      {"text": "What's something you HAVE in your HOUSE?", "type": "object"}
     ]},
     {"group": "answers_would_cynical", "texts":
     [

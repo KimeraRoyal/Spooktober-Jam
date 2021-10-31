@@ -41,8 +41,22 @@ namespace Spooktober.Dialogue
             m_textMeshProText = GetComponentInChildren<TMP_Text>();
         }
 
+        public void WriteText(string[] _dialogues, float _delay = 0.0f, Action _onFinished = null)
+            => StartCoroutine(WriteTextCoroutine(_dialogues, _delay, _onFinished));
+        
         public void WriteText(string _dialogue, bool _instant = false)
             => StartCoroutine(WriteTextCoroutine(_dialogue, _instant));
+
+        private IEnumerator WriteTextCoroutine(string[] _dialogues, float _delay = 0.0f, Action _onFinished = null)
+        {
+            foreach (var dialogue in _dialogues)
+            {
+                yield return WriteTextCoroutine(dialogue, false);
+                if (_delay > 0.0f) yield return new WaitForSeconds(_delay);
+                else yield return new WaitUntil(() => Input.anyKeyDown);
+            }
+            _onFinished?.Invoke();
+        }
 
         private IEnumerator WriteTextCoroutine(string _dialogue, bool _instant)
         {

@@ -313,9 +313,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_characterName: Beholder
-  cool: 0
-  cute: 0
-  serious: 0
-  childish: 0
-  cynical: 0
-  father: 0
+  m_introDialogueLines: 6

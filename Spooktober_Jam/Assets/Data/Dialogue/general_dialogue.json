@@ -1,11 +1,57 @@
 {
   "texts" :
   [
-    {"id": "stat_cool", "text": "COOL"},
-    {"id": "stat_cute", "text": "CUTE"},
-    {"id": "stat_serious", "text": "BUSINESSLIKE"},
-    {"id": "stat_childish", "text": "CHILDISH"},
-    {"id": "stat_cynical", "text": "CYNICAL"},
-    {"id": "stat_father", "text": "FATHER"}
+    {"id": "test", "text": "Test."}
+  ],
+  "groups" : 
+  [
+    {"group" : "stat_cool", "texts" :
+    [
+      {"text": "COOL"},
+      {"text": "RADICAL"},
+      {"text": "BADASS"},
+      {"text": "SWAG"},
+      {"text": "AWESOME"}
+    ]},
+    {"group" : "stat_cute", "texts" :
+    [
+      {"text": "CUTE"},
+      {"text": "SWEET"},
+      {"text": "LOVABLE"},
+      {"text": "ENDEARING"},
+      {"text": "BONNIE"}
+    ]},
+    {"group" : "stat_serious", "texts" :
+    [
+      {"text": "SERIOUS"},
+      {"text": "BUSINESSLIKE"},
+      {"text": "PROFESSIONAL"},
+      {"text": "CORPORATE"},
+      {"text": "METHODICAL"}
+    ]},
+    {"group" : "stat_childish", "texts" :
+    [
+      {"text": "CHILDISH"},
+      {"text": "YOUTHFUL"},
+      {"text": "NAIVE"},
+      {"text": "BABBY"},
+      {"text": "INNOCENT"}
+    ]},
+    {"group" : "stat_cynical", "texts" :
+    [
+      {"text": "CYNICAL"},
+      {"text": "PESSIMISTIC"},
+      {"text": "SARDONIC"},
+      {"text": "WEATHERED"},
+      {"text": "DISILLUSIONED"}
+    ]},
+    {"group" : "stat_father", "texts" :
+    [
+      {"text": "FATHER"},
+      {"text": "PATERNAL"},
+      {"text": "DAD"},
+      {"text": "PAPA"},
+      {"text": "DAD-ADJACENT"}
+    ]}
   ]
 }

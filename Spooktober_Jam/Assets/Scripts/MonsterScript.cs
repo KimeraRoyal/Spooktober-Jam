@@ -1,41 +1,63 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using Spooktober.Dialogue;
+using Spooktober.UI;
 using UnityEngine;
+using UnityEngine.Events;
+using Debug = UnityEngine.Debug;
+using Random = UnityEngine.Random;
 
 namespace Spooktober.Character
 {
     public class MonsterScript : MonoBehaviour
     {
+        private DialogueManager m_dialogueManager;
+
+        private MonsterWants m_monsterWants;
+        
         public float randomness = 5;
         public GameObject monst;
 
-        public float monsterIndex = 0;
+        public int monsterIndex = 0;
         public GameObject monster0;
         public GameObject monster1;
         public GameObject monster2;
 
-        private GameObject[] people;
-        public float cool;
-        public float cute;
-        public float serious;
-        public float childish;
-        public float cynical;
-        public float father;
+        public string monsterName;
 
-        public string loves;
-        public string likes;
-        public string hates;
-        public string special;
-        private string pref;
+        private GameObject[] people;
+        public int cool;
+        public int cute;
+        public int serious;
+        public int childish;
+        public int cynical;
+        public int father;
+
+        public Stat loves;
+        public Stat likes;
+        public Stat hates;
+        public Stat special;
+        public bool hasSpecial;
+        public bool mode;
 
         private bool monster0seen = false;
         private bool monster1seen = false;
         private bool monster2seen = false;
 
+        public UnityEvent m_introOver;
+        
         public CharacterStats CharacterStats
         {
             get;
             private set;
+        }
+
+        private void Awake()
+        {
+            m_dialogueManager = FindObjectOfType<DialogueManager>();
+            m_monsterWants = FindObjectOfType<MonsterWants>();
         }
 
         // Start is called before the first frame update
@@ -47,70 +69,90 @@ namespace Spooktober.Character
 
         public void InitiateMonster()
         {
-            monsterIndex = Mathf.Round(Random.Range(-0.4f, 1.9f));
+            monsterIndex = Mathf.RoundToInt(Random.Range(-0.4f, 1.9f));
 
             if (monst != null) Destroy(monst);
-            if (monsterIndex == 0)
+            switch (monsterIndex)
             {
-                monst = Instantiate(monster0, transform);
-            }
-            else if (monsterIndex == 1)
-            {
-                monst = Instantiate(monster1, transform);
-            }
-            else if (monsterIndex == 2)
-            {
-                monst = Instantiate(monster2, transform);
+                case 0:
+                    monst = Instantiate(monster0, transform);
+                    monsterName = "gnome";
+                    break;
+                case 1:
+                    monst = Instantiate(monster1, transform);
+                    monsterName = "beholder";
+                    break;
+                case 2:
+                    monst = Instantiate(monster2, transform);
+                    monsterName = "entity";
+                    break;
             }
 
             people = GameObject.FindGameObjectsWithTag("Player");
             CharacterStats = people[Random.Range(0,people.Length)].GetComponent<Character>().CharacterStats;
 
-            cool = Mathf.Round(CharacterStats.GetStat(Stat.Cool) + Random.Range(randomness*-1,randomness));
-            cute = Mathf.Round(CharacterStats.GetStat(Stat.Cute) + Random.Range(randomness * -1, randomness));
-            serious = Mathf.Round(CharacterStats.GetStat(Stat.Serious) + Random.Range(randomness * -1, randomness));
-            childish = Mathf.Round(CharacterStats.GetStat(Stat.Childish) + Random.Range(randomness * -1, randomness));
-            cynical = Mathf.Round(CharacterStats.GetStat(Stat.Cynical) + Random.Range(randomness * -1, randomness));
-            father = Mathf.Round(CharacterStats.GetStat(Stat.Father) + Random.Range(randomness * -1, randomness));
+            cool = Mathf.RoundToInt(CharacterStats.GetStat(Stat.Cool) + Random.Range(randomness* -1.0f, randomness));
+            cute = Mathf.RoundToInt(CharacterStats.GetStat(Stat.Cute) + Random.Range(randomness * -1.0f, randomness));
+            serious = Mathf.RoundToInt(CharacterStats.GetStat(Stat.Serious) + Random.Range(randomness * -1.0f, randomness));
+            childish = Mathf.RoundToInt(CharacterStats.GetStat(Stat.Childish) + Random.Range(randomness * -1.0f, randomness));
+            cynical = Mathf.RoundToInt(CharacterStats.GetStat(Stat.Cynical) + Random.Range(randomness * -1.0f, randomness));
+            father = Mathf.RoundToInt(CharacterStats.GetStat(Stat.Father) + Random.Range(randomness * -1.0f, randomness));
 
+            mode = Random.Range(0, 2) == 1;
             SetPreference();
 
-            if (monsterIndex != 2)
+            hasSpecial = monsterIndex < 1;
+            if (hasSpecial)
             {
                 special = loves;
-                while(special == loves || special == hates || special == likes)
+                while (special == loves || special == hates || special == likes)
                 {
-                    var tity = Mathf.Round(Random.Range(0,6));
-                    if (tity == 1) special = "cute";
-                    if (tity == 2) special = "cool";
-                    if (tity == 3) special = "serious";
-                    if (tity == 4) special = "childish";
-                    if (tity == 5) special = "cynical";
-                    if (tity == 6) special = "father";
+                    var specialIndex = Random.Range(0, 6);
+                    special = specialIndex switch
+                    {
+                        0 => Stat.Cool,
+                        1 => Stat.Cute,
+                        2 => Stat.Serious,
+                        3 => Stat.Childish,
+                        4 => Stat.Cynical,
+                        5 => Stat.Father,
+                        _ => special
+                    };
                 }
             }
 
-            ///IMPORTANT!IMPORTANT!IMPORTANT!IMPORTANT!IMPORTANT!IMPORTANT!IMPORTANT!IMPORTANT!IMPORTANT!IMPORTANT!IMPORTANT!IMPORTANT!
-            ///PUT THE MONSTER DIALOG INTRODUCTIONS HERE
-            ///
+            var monster = monst.GetComponent<Monster.Monster>();
+            
+            var monsterSeen = false;
             if (!monster0seen && monsterIndex == 0)
             {
                 monster0seen = true;
-            } else if (!monster1seen && monsterIndex == 1)
+            }
+            else if (!monster1seen && monsterIndex == 1)
             {
                 monster1seen = true;
-            } else if (!monster2seen && monsterIndex == 2)
+            }
+            else if (!monster2seen && monsterIndex == 2)
             {
                 monster2seen = true;
+            }
+            else
+            {
+                monsterSeen = true;
+            }
+            
+            if (!monsterSeen)
+            {
+                m_monsterWants.UpdateText("intro_" + monsterName, monster.IntroDialogueLines, () => m_introOver?.Invoke());
             }
         }
 
         void SetPreference()
         {
-            float[] myArray = new float[] { cool,cute,serious,childish,cynical,father };
-            float largest = float.MinValue;
-            float second = float.MinValue;
-            foreach (float i in myArray)
+            var myArray = new int[] { cool,cute,serious,childish,cynical,father };
+            var largest = int.MinValue;
+            var second = int.MinValue;
+            foreach (var i in myArray)
             {
                 if (i > largest)
                 {
@@ -120,32 +162,22 @@ namespace Spooktober.Character
                 else if (i > second)
                     second = i;
             }
-
-            if (largest == cool) pref = "cool";
-            if (largest == cute) pref = "cute";
-            if (largest == serious) pref = "serious";
-            if (largest == childish) pref = "childish";
-            if (largest == cynical) pref = "cynical";
-            if (largest == father) pref = "father";
-            loves = pref;
-
-            if (second == cool) pref = "cool";
-            if (second == cute) pref = "cute";
-            if (second == serious) pref = "serious";
-            if (second == childish) pref = "childish";
-            if (second == cynical) pref = "cynical";
-            if (second == father) pref = "father";
-            likes = pref;
-
+            
             var smallest = Mathf.Min(cool,cute,serious,childish,cynical,father);
+            loves = CompareStats(largest);
+            likes = CompareStats(second);
+            hates = CompareStats(smallest);
+        }
 
-            if (smallest == cool) pref = "cool";
-            if (smallest == cute) pref = "cute";
-            if (smallest == serious) pref = "serious";
-            if (smallest == childish) pref = "childish";
-            if (smallest == cynical) pref = "cynical";
-            if (smallest == father) pref = "father";
-            hates = pref;
+        private Stat CompareStats(int _value)
+        {
+            if (_value == cool) return Stat.Cool;
+            if (_value == cute) return Stat.Cute;
+            if (_value == serious) return Stat.Serious;
+            if (_value == childish) return Stat.Childish;
+            if (_value == cynical) return Stat.Cynical;
+            if (_value == father) return Stat.Father;
+            return Stat.Cool;
         }
     }
 }

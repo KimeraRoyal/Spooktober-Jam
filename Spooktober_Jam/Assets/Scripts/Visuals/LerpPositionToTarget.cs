@@ -24,6 +24,9 @@ namespace Spooktober.Visuals
             m_startingPosition = transform.position;
         }
 
+        public void SetTarget(Transform _target)
+            => Target = _target;
+
         private void Update()
         {
             Vector3 targetPosition;

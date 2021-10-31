@@ -14,8 +14,6 @@ namespace Spooktober.Character
     public class MonsterScript : MonoBehaviour
     {
         private DialogueManager m_dialogueManager;
-
-        private MonsterWants m_monsterWants;
         
         public float randomness = 5;
         public GameObject monst;
@@ -49,6 +47,9 @@ namespace Spooktober.Character
         public UnityEvent m_introBegin;
         public UnityEvent m_introOver;
 
+        public MonsterWants introDialogue;
+        public MonsterWants wantDialogue;
+
         public CharacterStats CharacterStats
         {
             get;
@@ -58,7 +59,6 @@ namespace Spooktober.Character
         private void Awake()
         {
             m_dialogueManager = FindObjectOfType<DialogueManager>();
-            m_monsterWants = FindObjectOfType<MonsterWants>();
         }
 
         // Start is called before the first frame update
@@ -145,8 +145,14 @@ namespace Spooktober.Character
             if (!monsterSeen)
             {
                 m_introBegin?.Invoke();
-                m_monsterWants.UpdateText("intro_" + monsterName, monster.IntroDialogueLines, () => m_introOver?.Invoke());
+                introDialogue.UpdateText("intro_" + monsterName, monster.IntroDialogueLines, IntroOver);
             }
+        }
+
+        private void IntroOver()
+        {
+            m_introOver?.Invoke();
+            wantDialogue.UpdateText("type_" + (mode ? "b" : "a") + "_" + monsterName + Random.Range(0, 2));
         }
 
         void SetPreference()

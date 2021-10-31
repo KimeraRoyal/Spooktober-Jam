@@ -4,8 +4,8 @@
     {"group": "questions_cynical", "texts": 
     [
       {"text": "Would you ever FALL IN LOVE with the BEAUTY OF THE WORLD?", "type": "would"},
-      {"text": "How much do you like HUMAN BEINGS?", "type": "do"},
-      {"text": "How often do you SUNSHINE and POSITITTY?", "type": "do"},
+      {"text": "Do you like HUMAN BEINGS?", "type": "do"},
+      {"text": "Do you often BASK in SUNSHINE and POSITITY?", "type": "do"},
       {"text": "Can you FEEL genuine emotion?", "type": "can"},
       {"text": "object question", "type": "object"}
     ]},

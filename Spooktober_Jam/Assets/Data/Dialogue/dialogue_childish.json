@@ -4,8 +4,8 @@
     {"group": "questions_childish", "texts": 
     [
       {"text": "Would you ever LICK a LOLLY POP?", "type": "would"},
-      {"text": "How much do you like BABY RATTLER?", "type": "do"},
-      {"text": "How often do you CANDY STOLEN?", "type": "do"},
+      {"text": "Do you like BABY RATTLER?", "type": "do"},
+      {"text": "Do you often get CANDY STOLEN?", "type": "do"},
       {"text": "Can you SING a NURSERY RHYME?", "type": "can"},
       {"text": "object question", "type": "object"}
     ]},

@@ -4,8 +4,8 @@
     {"group": "questions_cute", "texts": 
     [
       {"text": "Would you ever KISS a BABYKITTEN?", "type": "would"},
-      {"text": "How much do you like MAGICAL GIRL'S?", "type": "do"},
-      {"text": "Can you SNIFF a FLOWER?", "type": "can"},
+      {"text": "Do you like MAGICAL GIRL'S?", "type": "do"},
+      {"text": "Can you SNIFF a TINY FLOWER?", "type": "can"},
       {"text": "object question", "type": "object"}
     ]},
     {"group": "answers_would_cute", "texts":

@@ -44,12 +44,12 @@
     {"group": "answers_object_cute", "texts":
     [
       {"text": "", "value": 80},
+      {"text": "", "value": 60},
+      {"text": "", "value": 35},
       {"text": "", "value": 30},
       {"text": "", "value": 25},
       {"text": "", "value": 20},
-      {"text": "", "value": 15},
       {"text": "", "value": 10},
-      {"text": "", "value": 5},
       {"text": "", "value": 0}
     ]}
   ]

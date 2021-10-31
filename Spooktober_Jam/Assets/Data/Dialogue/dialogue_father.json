@@ -8,7 +8,7 @@
       {"text": "How much do you like SPENDING TIME with YOUR SON?", "type": "do"},
       {"text": "Do you like TRANSMIT INHERITANCE?", "type": "do"},
       {"text": "Can you GRILL?", "type": "can"},
-      {"text": "Can you of the WATCH FAMILY GROW UP?", "type": "can"},
+      {"text": "Can you WATCH FAMILY GROW UP?", "type": "can"},
       {"text": "What would you pass onto your NEXT OF KIN?", "type": "object"},
       {"text": "What is your highest rated FAMILY HEIRLOOM?", "type": "object"}
     ]},
@@ -48,12 +48,12 @@
     {"group": "answers_object_father", "texts":
     [
       {"text": "NEWBORN", "value": 80},
+      {"text": "", "value": 60},
+      {"text": "", "value": 35},
       {"text": "", "value": 30},
       {"text": "", "value": 25},
       {"text": "", "value": 20},
-      {"text": "", "value": 15},
       {"text": "", "value": 10},
-      {"text": "", "value": 5},
       {"text": "", "value": 0}
     ]}
   ]

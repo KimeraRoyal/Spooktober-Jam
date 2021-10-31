@@ -68,12 +68,12 @@
     {"group": "answers_object_cool", "texts":
     [
       {"text": "THE OBVIOUS ANSWER IS... SUNGLASS! CONVERTIBLE SUNGLASS!", "value": 80},
-      {"text": "Hmmm... how about ROCKET LAUNCHER?", "value": 30},
-      {"text": "My answer? It'd be... GUN...", "value": 25},
-      {"text": "I'm thinking BASKETBALL.", "value": 20},
-      {"text": "Probably KALEIDOSCOPE...", "value": 15},
-      {"text": "That'd be VIDEO GAME.", "value": 10},
-      {"text": "Heh, that one's easy... PROPELLER HAT!", "value": 5},
+      {"text": "Hmmm... how about ROCKET LAUNCHER?", "value": 60},
+      {"text": "My answer? It'd be... GUN...", "value": 35},
+      {"text": "I'm thinking BASKETBALL.", "value": 30},
+      {"text": "Probably KALEIDOSCOPE...", "value": 25},
+      {"text": "That'd be VIDEO GAME.", "value": 20},
+      {"text": "Heh, that one's easy... PROPELLER HAT!", "value": 10},
       {"text": "I-I'm trying to think of something cool... I can't think of anything...", "value": 0}
     ]}
   ]

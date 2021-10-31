@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1188596672812872220}
   - component: {fileID: 1188596672812872221}
+  - component: {fileID: 2716506158728589178}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Untagged
@@ -44,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randomness: 5
+  monst: {fileID: 0}
   monsterIndex: 0
   monster0: {fileID: 5267246539331759602, guid: 56529f26b0313ae4fb5b41c861a47a9f, type: 3}
   monster1: {fileID: 3557759791800676129, guid: ee06e5654efdaf64b883239d57702f32, type: 3}
@@ -58,3 +60,15 @@ MonoBehaviour:
   likes: 
   hates: 
   special: 
+--- !u!114 &2716506158728589178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188596672812872222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d1872084f1ff14ebe0d2fdcb6d886d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

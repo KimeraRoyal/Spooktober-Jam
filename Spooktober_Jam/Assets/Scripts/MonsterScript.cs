@@ -75,7 +75,7 @@ namespace Spooktober.Character
 
             SetPreference();
 
-            if (monsterIndex != 1)
+            if (monsterIndex != 2)
             {
                 special = loves;
                 while(special == loves || special == hates || special == likes)

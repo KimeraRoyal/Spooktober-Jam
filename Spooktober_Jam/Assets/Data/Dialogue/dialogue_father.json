@@ -14,47 +14,45 @@
     ]},
     {"group": "answers_would_father", "texts":
     [
-      {"text": "", "value": 80},
-      {"text": "", "value": 30},
-      {"text": "", "value": 25},
-      {"text": "", "value": 20},
-      {"text": "", "value": 15},
-      {"text": "", "value": 10},
-      {"text": "", "value": 5},
-      {"text": "", "value": 0}
+      {"text": "OF COURSE SON! YEP!", "value": 80},
+      {"text": "I'd have to check with my family first but I wanna!!", "value": 30},
+      {"text": "Yeah, man!! Yeah brother!!", "value": 25},
+      {"text": "Oh yeah. Yeah I would.", "value": 20},
+      {"text": "Kinda...", "value": 15},
+      {"text": "I don't so... Sounds good though...", "value": 10},
+      {"text": "I don't want anything to do with that.", "value": 5},
+      {"text": "No... Why would I want to...", "value": 0}
     ]},
     {"group": "answers_do_father", "texts":
     [
-      {"text": "", "value": 80},
-      {"text": "", "value": 30},
-      {"text": "", "value": 25},
-      {"text": "", "value": 20},
-      {"text": "", "value": 15},
-      {"text": "", "value": 10},
-      {"text": "", "value": 5},
-      {"text": "", "value": 0}
+      {"text": "YEAH I DO!! HHRRRGGHH!! oh YEAH!!", "value": 80},
+      {"text": "Uh huh. Of course I do. That's my thing.", "value": 30},
+      {"text": "Yeah sounds good!", "value": 25},
+      {"text": "Could be cool!! I'll do it!!", "value": 20},
+      {"text": "No... No... Well, maybe.", "value": 15},
+      {"text": "Uh, nah, I don't...", "value": 10},
+      {"text": "No way.", "value": 5},
+      {"text": "Nope.", "value": 0}
     ]},
     {"group": "answers_can_father", "texts":
     [
-      {"text": "", "value": 80},
-      {"text": "", "value": 30},
-      {"text": "", "value": 25},
-      {"text": "", "value": 20},
-      {"text": "", "value": 15},
-      {"text": "", "value": 10},
-      {"text": "", "value": 5},
-      {"text": "", "value": 0}
+      {"text": "I CAN! ANYTIME!", "value": 80},
+      {"text": "Yup. Easy! Hahaha!", "value": 30},
+      {"text": "Heh, yeah I can. Of course.", "value": 25},
+      {"text": "My wife thinks I can, but...", "value": 20},
+      {"text": "I'd love to one day.", "value": 15},
+      {"text": "Uh huh... Well, I don't think I can.", "value": 10},
+      {"text": "No, I can't do that... Sounds scary...", "value": 5},
+      {"text": "No way! Never!", "value": 0}
     ]},
     {"group": "answers_object_father", "texts":
     [
-      {"text": "NEWBORN", "value": 80},
-      {"text": "", "value": 60},
-      {"text": "", "value": 35},
-      {"text": "", "value": 30},
-      {"text": "", "value": 25},
-      {"text": "", "value": 20},
-      {"text": "", "value": 10},
-      {"text": "", "value": 0}
+      {"text": "Yeah, it'd be BBQ TRUCK... Or, my KIDS.", "value": 60},
+      {"text": "NEWBORN!", "value": 35},
+      {"text": "My LAME GUITAR.", "value": 30},
+      {"text": "My BEAT UP OLD VAN.", "value": 25},
+      {"text": "I'm thinking PACKED LUNCHBOX.", "value": 20},
+      {"text": "ROCK CD...", "value": 10},
     ]}
   ]
 }

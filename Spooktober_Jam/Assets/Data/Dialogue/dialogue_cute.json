@@ -6,51 +6,50 @@
       {"text": "Would you ever KISS a BABYKITTEN?", "type": "would"},
       {"text": "Do you like MAGICAL GIRL'S?", "type": "do"},
       {"text": "Can you SNIFF a TINY FLOWER?", "type": "can"},
-      {"text": "object question", "type": "object"}
+      {"text": "What's your favourite thing in the world?", "type": "object"}
     ]},
     {"group": "answers_would_cute", "texts":
     [
-      {"text": "", "value": 80},
-      {"text": "", "value": 30},
-      {"text": "", "value": 25},
-      {"text": "", "value": 20},
-      {"text": "", "value": 15},
-      {"text": "", "value": 10},
-      {"text": "", "value": 5},
-      {"text": "", "value": 0}
+      {"text": "Hehehe, I suppose I would! ^-^", "value": 80},
+      {"text": "Yup! ^^", "value": 30},
+      {"text": "Yeah I would! Yay!", "value": 25},
+      {"text": "I would do that! Sounds like fun!", "value": 20},
+      {"text": "I would...!", "value": 15},
+      {"text": "I guess...", "value": 10},
+      {"text": "Doesn't sound like fun.", "value": 5},
+      {"text": "That sounds boring.", "value": 0}
     ]},
     {"group": "answers_do_cute", "texts":
     [
-      {"text": "", "value": 80},
-      {"text": "", "value": 30},
-      {"text": "", "value": 25},
-      {"text": "", "value": 20},
-      {"text": "", "value": 15},
-      {"text": "", "value": 10},
-      {"text": "", "value": 5},
-      {"text": "", "value": 0}
+      {"text": "I DO! YAAA ^-^", "value": 80},
+      {"text": "Oh yeah! I do! Hehe!", "value": 30},
+      {"text": "Oh! I guess I do! >///<", "value": 25},
+      {"text": "Yeah, I suppose so!", "value": 20},
+      {"text": "Sounds cool...", "value": 15},
+      {"text": "I don't really feel strongly either way about that.", "value": 10},
+      {"text": "NO. O_O", "value": 5},
+      {"text": "Uhh... I don't...", "value": 5},
+      {"text": "Nope.", "value": 0}
     ]},
     {"group": "answers_can_cute", "texts":
     [
-      {"text": "", "value": 80},
-      {"text": "", "value": 30},
-      {"text": "", "value": 25},
-      {"text": "", "value": 20},
-      {"text": "", "value": 15},
-      {"text": "", "value": 10},
-      {"text": "", "value": 5},
-      {"text": "", "value": 0}
+      {"text": "YAAAA YAYA I CAN!! YAY! ^^", "value": 80},
+      {"text": "Of COURSE I can!! :D", "value": 30},
+      {"text": "I can! Yeah!", "value": 25},
+      {"text": "Yep! I can do that!", "value": 20},
+      {"text": "Oh yeah, sure.", "value": 15},
+      {"text": "I could, I guess.", "value": 10},
+      {"text": "Nah... I wouldn't wanna...", "value": 5},
+      {"text": "I can't.", "value": 0}
     ]},
     {"group": "answers_object_cute", "texts":
     [
-      {"text": "", "value": 80},
-      {"text": "", "value": 60},
-      {"text": "", "value": 35},
-      {"text": "", "value": 30},
-      {"text": "", "value": 25},
-      {"text": "", "value": 20},
-      {"text": "", "value": 10},
-      {"text": "", "value": 0}
+      {"text": "Can I pick KITTEN and PUPPY!? O_O", "value": 60},
+      {"text": "I'd pick FLOWER! ^^", "value": 35},
+      {"text": "What about MASCOT KEYCHAIN?", "value": 30},
+      {"text": "I wanna pick GUMMY!", "value": 25},
+      {"text": "Maybe BABY!", "value": 20},
+      {"text": "It'd have to be ANIMAL...", "value": 10}
     ]}
   ]
 }

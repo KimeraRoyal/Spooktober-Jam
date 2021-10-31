@@ -12,51 +12,50 @@
       {"text": "Can you FUNCTION according to a SCHEDULE?", "type": "can"},
       {"text": "Can you APPLY PROFIT FORECAST?", "type": "can"},
       {"text": "Can you do AGILE METHODOLOGY?", "type": "can"},
-      {"text": "object question", "type": "object"}
+      {"text": "What would you bring to BRING YOUR OBJECT TO WORK DAY?", "type": "object"}
     ]},
     {"group": "answers_would_serious", "texts":
     [
-      {"text": "", "value": 80},
-      {"text": "", "value": 30},
-      {"text": "", "value": 25},
-      {"text": "", "value": 20},
-      {"text": "", "value": 15},
-      {"text": "", "value": 10},
-      {"text": "", "value": 5},
-      {"text": "", "value": 0}
+      {"text": "Of course. I'm a CEO, you know.", "value": 80},
+      {"text": "Would I? I would. It satisfies me in many ways.", "value": 30},
+      {"text": "Yes. In fact, I'm quite good at it.", "value": 25},
+      {"text": "I could try my best...", "value": 20},
+      {"text": "I don't know, but if I had to...", "value": 15},
+      {"text": "Uh... I don't want to do that...", "value": 10},
+      {"text": "What does that mean!? WHAT DOES IT MEAN!!!", "value": 5},
+      {"text": "No! Noooo!!!", "value": 0}
     ]},
     {"group": "answers_do_serious", "texts":
     [
-      {"text": "", "value": 80},
-      {"text": "", "value": 30},
-      {"text": "", "value": 25},
-      {"text": "", "value": 20},
-      {"text": "", "value": 15},
-      {"text": "", "value": 10},
-      {"text": "", "value": 5},
-      {"text": "", "value": 0}
+      {"text": "Affirmative, yes. Of course I do.", "value": 80},
+      {"text": "I do, yes. It's my job.", "value": 30},
+      {"text": "I do. That's true.", "value": 25},
+      {"text": "I can do that, if you need me to.", "value": 20},
+      {"text": "I can try... I'm not so good...", "value": 15},
+      {"text": "I don't think so... What the hell...", "value": 10},
+      {"text": "Well, uh... No...", "value": 5},
+      {"text": "NO WAY... I DON'T...", "value": 0}
     ]},
     {"group": "answers_can_serious", "texts":
     [
-      {"text": "", "value": 80},
-      {"text": "", "value": 30},
-      {"text": "", "value": 25},
-      {"text": "", "value": 20},
-      {"text": "", "value": 15},
-      {"text": "", "value": 10},
-      {"text": "", "value": 5},
-      {"text": "", "value": 0}
+      {"text": "I am the master of it.", "value": 80},
+      {"text": "Can I? Please, it's my job.", "value": 30},
+      {"text": "I'm quite good at it.", "value": 25},
+      {"text": "I can do that, if my job requires it.", "value": 20},
+      {"text": "I could try... I don't know what it means though...", "value": 15},
+      {"text": "I don't want to do that! Even if I know what it means!", "value": 10},
+      {"text": "DON'T SAY THIS TO ME.", "value": 5},
+      {"text": "I cannot.", "value": 0}
     ]},
     {"group": "answers_object_serious", "texts":
     [
-      {"text": "", "value": 80},
-      {"text": "", "value": 60},
-      {"text": "", "value": 35},
-      {"text": "", "value": 30},
-      {"text": "", "value": 25},
-      {"text": "", "value": 20},
-      {"text": "", "value": 10},
-      {"text": "", "value": 0}
+      {"text": "My BILLION DOLLAR SAVINGS ACCOUNT, of course.", "value": 80},
+      {"text": "I'd love to choose FINANCIAL REPORT.", "value": 60},
+      {"text": "I think it'd be STOCK MARKET.", "value": 35},
+      {"text": "I choose SALES.", "value": 30},
+      {"text": "How about MONEY?", "value": 25},
+      {"text": "I guess... I'd have to pick TAX RETURNS...", "value": 20},
+      {"text": "I don't know... Uh, WALLET??", "value": 10},
     ]}
   ]
 }

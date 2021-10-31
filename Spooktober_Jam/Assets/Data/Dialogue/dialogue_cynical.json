@@ -7,51 +7,49 @@
       {"text": "Do you like HUMAN BEINGS?", "type": "do"},
       {"text": "Do you often BASK in SUNSHINE and POSITITY?", "type": "do"},
       {"text": "Can you FEEL genuine emotion?", "type": "can"},
-      {"text": "object question", "type": "object"}
+      {"text": "What's the most important thing?", "type": "object"}
     ]},
     {"group": "answers_would_cynical", "texts":
     [
-      {"text": "", "value": 80},
-      {"text": "", "value": 30},
-      {"text": "", "value": 25},
-      {"text": "", "value": 20},
-      {"text": "", "value": 15},
-      {"text": "", "value": 10},
-      {"text": "", "value": 5},
-      {"text": "", "value": 0}
+      {"text": "Why are you even asking that question?", "value": 80},
+      {"text": "Never. Why would I do that?", "value": 30},
+      {"text": "I don't care about it.", "value": 25},
+      {"text": "Maybe once, I did.", "value": 20},
+      {"text": "Sure...", "value": 15},
+      {"text": "Yeah, of course.", "value": 10},
+      {"text": "YES! Easy.", "value": 5},
+      {"text": "Yeah!!!", "value": 0}
     ]},
     {"group": "answers_do_cynical", "texts":
     [
-      {"text": "", "value": 80},
-      {"text": "", "value": 30},
-      {"text": "", "value": 25},
-      {"text": "", "value": 20},
-      {"text": "", "value": 15},
-      {"text": "", "value": 10},
-      {"text": "", "value": 5},
-      {"text": "", "value": 0}
+      {"text": "No. Why would I? What's your point?", "value": 80},
+      {"text": "That would be illogical, so no.", "value": 30},
+      {"text": "Whatever.", "value": 25},
+      {"text": "Nah.", "value": 20},
+      {"text": "I guess.", "value": 15},
+      {"text": "I suppose I do.", "value": 10},
+      {"text": "Yeah I do!", "value": 5},
+      {"text": "I DO!", "value": 0}
     ]},
     {"group": "answers_can_cynical", "texts":
     [
-      {"text": "", "value": 80},
-      {"text": "", "value": 30},
-      {"text": "", "value": 25},
-      {"text": "", "value": 20},
-      {"text": "", "value": 15},
-      {"text": "", "value": 10},
-      {"text": "", "value": 5},
-      {"text": "", "value": 0}
+      {"text": "I don't care about your questions anymore.", "value": 80},
+      {"text": "Why would I be able to do that...", "value": 30},
+      {"text": "No. I can't.", "value": 25},
+      {"text": "I dunno about that...", "value": 20},
+      {"text": "Yeah...", "value": 15},
+      {"text": "I can!", "value": 10},
+      {"text": "Why, I CAN do that!", "value": 5},
+      {"text": "I can do anything, if I believe in myself!", "value": 0}
     ]},
     {"group": "answers_object_cynical", "texts":
     [
-      {"text": "", "value": 80},
-      {"text": "", "value": 60},
-      {"text": "", "value": 35},
-      {"text": "", "value": 30},
-      {"text": "", "value": 25},
-      {"text": "", "value": 20},
-      {"text": "", "value": 10},
-      {"text": "", "value": 0}
+      {"text": "Why bother answering? I'm bored...", "value": 60},
+      {"text": "It's FACTS and LOGIC.", "value": 35},
+      {"text": "What a pointless question... I guess my BRAIN.", "value": 30},
+      {"text": "Uh, REASON.", "value": 25},
+      {"text": "Uh, I dunno... Whatever...", "value": 20},
+      {"text": "I guess, book?", "value": 10},
     ]}
   ]
 }

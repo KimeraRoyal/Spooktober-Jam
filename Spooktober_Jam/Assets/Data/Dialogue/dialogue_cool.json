@@ -11,7 +11,7 @@
       {"text": "Can you do GUN?", "type": "can"},
       {"text": "Can you handle EXTREME?", "type": "can"},
       {"text": "If you could bring one object to DESERT ISLAND, what would it be?", "type": "object"},
-      {"text": "What would you bring to SHOW & TELL?", "type": "object"}
+      {"text": "What would you bring to MOTORCAR RALLY?", "type": "object"}
     ]},
     {"group": "answers_would_cool", "texts":
     [

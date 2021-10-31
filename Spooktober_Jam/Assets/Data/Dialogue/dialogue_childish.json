@@ -7,51 +7,50 @@
       {"text": "Do you like BABY RATTLER?", "type": "do"},
       {"text": "Do you often get CANDY STOLEN?", "type": "do"},
       {"text": "Can you SING a NURSERY RHYME?", "type": "can"},
-      {"text": "object question", "type": "object"}
+      {"text": "What's your favourite thing to play with?", "type": "object"}
     ]},
     {"group": "answers_would_childish", "texts":
     [
-      {"text": "", "value": 80},
-      {"text": "", "value": 30},
-      {"text": "", "value": 25},
-      {"text": "", "value": 20},
-      {"text": "", "value": 15},
-      {"text": "", "value": 10},
-      {"text": "", "value": 5},
-      {"text": "", "value": 0}
+      {"text": "I WOULD!!! Wie cool ist das bitten!! Yippeeeeeee!!", "value": 80},
+      {"text": "Haha!! Yes yes yes!!!", "value": 30},
+      {"text": "I WOULD!!!", "value": 25},
+      {"text": "Hehe, yeah...", "value": 20},
+      {"text": "I mean... sounds kinda fun I guess...", "value": 15},
+      {"text": "I don't think I'd do that...", "value": 10},
+      {"text": "No. What do you think I am, a baby?", "value": 5},
+      {"text": "I wouldn't do that...", "value": 0}
     ]},
     {"group": "answers_do_childish", "texts":
     [
-      {"text": "", "value": 80},
-      {"text": "", "value": 30},
-      {"text": "", "value": 25},
-      {"text": "", "value": 20},
-      {"text": "", "value": 15},
-      {"text": "", "value": 10},
-      {"text": "", "value": 5},
-      {"text": "", "value": 0}
+      {"text": "Yayaya!! I do!!", "value": 80},
+      {"text": "Yes!!", "value": 30},
+      {"text": "I... suppose I do...!", "value": 25},
+      {"text": "I mean... kinda...", "value": 20},
+      {"text": "I dunno? Maybe?", "value": 15},
+      {"text": "Not anymore...", "value": 10},
+      {"text": "No. What the hell?", "value": 5},
+      {"text": "Why would I?", "value": 0}
     ]},
     {"group": "answers_can_childish", "texts":
     [
-      {"text": "", "value": 80},
-      {"text": "", "value": 30},
-      {"text": "", "value": 25},
-      {"text": "", "value": 20},
-      {"text": "", "value": 15},
-      {"text": "", "value": 10},
-      {"text": "", "value": 5},
-      {"text": "", "value": 0}
+      {"text": "YAA!!! OF COURSE I CAN!!!!", "value": 80},
+      {"text": "Yeah I can!! Wanna see!?", "value": 30},
+      {"text": "Yep! I do it a lot!", "value": 25},
+      {"text": "Yeah... I can do that! Uh huh!", "value": 20},
+      {"text": "I mean, I guess I'd be able to do that, yeah!", "value": 15},
+      {"text": "Uh... Well, yeah...", "value": 10},
+      {"text": "I don't want to do that though.", "value": 5},
+      {"text": "I literally can't do that.", "value": 0}
     ]},
     {"group": "answers_object_childish", "texts":
     [
-      {"text": "", "value": 80},
-      {"text": "", "value": 60},
-      {"text": "", "value": 35},
-      {"text": "", "value": 30},
-      {"text": "", "value": 25},
-      {"text": "", "value": 20},
-      {"text": "", "value": 10},
-      {"text": "", "value": 0}
+      {"text": "IT WOULD BE... BABYFOOD...! YAYAYA!!", "value": 60},
+      {"text": "TOYCAR, 110%!", "value": 35},
+      {"text": "How about FORTNIGHT and COCA COLA!", "value": 30},
+      {"text": "Maybe... PICTUREBOOK!", "value": 25},
+      {"text": "I'd have to choose BUBBLEBLOWER.", "value": 20},
+      {"text": "That'd be ENERGYDRINK", "value": 15},
+      {"text": "I guess it'd be BABY SOOTHER... I don't really like them though... I mean, uh...", "value": 10}
     ]}
   ]
 }

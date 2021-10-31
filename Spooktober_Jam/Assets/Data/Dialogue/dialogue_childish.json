@@ -4,10 +4,17 @@
     {"group": "questions_childish", "texts": 
     [
       {"text": "Would you ever LICK a LOLLY POP?", "type": "would"},
+      {"text": "Would you TRICK AND TREAT?", "type": "would"},
+      {"text": "Would you PLAY a TOY?", "type": "would"},
       {"text": "Do you like BABY RATTLER?", "type": "do"},
+      {"text": "Do you SQUEAL and CRY?", "type": "do"},
+      {"text": "Do you enjoy BEDTIME STORY?", "type": "do"},
       {"text": "Do you often get CANDY STOLEN?", "type": "do"},
       {"text": "Can you SING a NURSERY RHYME?", "type": "can"},
-      {"text": "What's your favourite thing to play with?", "type": "object"}
+      {"text": "Can you get on a SCHOOLBUS?", "type": "can"},
+      {"text": "Can you go to a PLAYDATE?", "type": "can"},
+      {"text": "What's your favourite thing to PLAY with?", "type": "object"},
+      {"text": "What do you like to CHEW ON?", "type": "object"}
     ]},
     {"group": "answers_would_childish", "texts":
     [

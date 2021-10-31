@@ -5,9 +5,12 @@
     [
       {"text": "Would you ever have CHILDREN?", "type": "would"},
       {"text": "Would you FISHING BY THE LAKE?", "type": "would"},
-      {"text": "Do you enjoy SPENDING TIME with YOUR SON?", "type": "do"},
+      {"text": "Would you FATHER-SON BONDING?", "type": "would"},
+      {"text": "Do you enjoy SPENDING TIME with your MANY SONS?", "type": "do"},
       {"text": "Do you like TRANSMIT INHERITANCE?", "type": "do"},
+      {"text": "Do you feel a compulsion to BLAST a VINTAGE ROCK MUSIC?", "type": "do"},
       {"text": "Can you GRILL?", "type": "can"},
+      {"text": "Can you compete in a PARENT TEACHER MEETING?", "type": "can"},
       {"text": "Can you WATCH FAMILY GROW UP?", "type": "can"},
       {"text": "What would you pass onto your NEXT OF KIN?", "type": "object"},
       {"text": "What is your highest rated FAMILY HEIRLOOM?", "type": "object"}

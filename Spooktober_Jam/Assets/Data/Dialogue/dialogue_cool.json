@@ -8,8 +8,10 @@
       {"text": "Would you go to VOLCANO?", "type": "would"},
       {"text": "Do you like EXPLOSION?", "type": "do"},
       {"text": "Do you like eating IRONNAIL for breakfast?", "type": "do"},
-      {"text": "Can you do GUN?", "type": "can"},
+      {"text": "Do fire MACHINEGUN regularly?", "type": "do"},
+      {"text": "Can you do POWERTOOL?", "type": "can"},
       {"text": "Can you handle EXTREME?", "type": "can"},
+      {"text": "Can you perform BACKFLIP?", "type": "can"},
       {"text": "If you could bring one object to DESERT ISLAND, what would it be?", "type": "object"},
       {"text": "What would you bring to MOTORCAR RALLY?", "type": "object"}
     ]},

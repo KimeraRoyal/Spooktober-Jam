@@ -4,9 +4,15 @@
     {"group": "questions_cute", "texts": 
     [
       {"text": "Would you ever KISS a BABYKITTEN?", "type": "would"},
+      {"text": "Would you ever MEOW?", "type": "would"},
+      {"text": "Would you like to DRAW a HEART?", "type": "would"},
       {"text": "Do you like MAGICAL GIRL'S?", "type": "do"},
+      {"text": "Do you like to PET a PUPPIES?", "type": "do"},
+      {"text": "Do you enjoy DOLLHOUSE?", "type": "do"},
       {"text": "Can you SNIFF a TINY FLOWER?", "type": "can"},
-      {"text": "What's your favourite thing in the world?", "type": "object"}
+      {"text": "Can you IMAGINE a TINY BABY SEAL SLEEPING IN THE SNOW?", "type": "can"},
+      {"text": "What's your favourite THING in THE WORLD?", "type": "object"},
+      {"text": "What do you LOVE to HUG?", "type": "object"}
     ]},
     {"group": "answers_would_cute", "texts":
     [

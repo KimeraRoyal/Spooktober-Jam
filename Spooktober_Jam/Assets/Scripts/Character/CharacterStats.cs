@@ -10,7 +10,11 @@ namespace Spooktober.Character
         private readonly int[] m_statAmounts;
         private int m_statTotal;
 
+        private Stat m_highestStat;
+
         public int StatTotal => m_statTotal;
+
+        public Stat HighestStat => m_highestStat;
         
         public CharacterStats(int _statTotal = 100)
         {
@@ -40,11 +44,17 @@ namespace Spooktober.Character
 
         private void SetStatAmounts(IReadOnlyList<float> _statWeights, float _weightTotal)
         {
+            var highestStatValue = 0;
+
             var statTotal = 0;
             for (var i = 0; i < m_statAmounts.Length; i++)
             {
                 m_statAmounts[i] = Mathf.RoundToInt((_statWeights[i] / _weightTotal) * m_statTotal);
                 statTotal += m_statAmounts[i];
+
+                if (m_statAmounts[i] <= highestStatValue) { continue; }
+                highestStatValue = m_statAmounts[i];
+                m_highestStat = (Stat) i;
             }
 
             if (statTotal == m_statTotal) { return; }

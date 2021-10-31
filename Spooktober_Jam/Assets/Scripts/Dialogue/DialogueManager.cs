@@ -29,7 +29,10 @@ namespace Spooktober.Dialogue
             => m_questions[_stat].GetRandomQuestion();
 
         public Answer GetAnswer(Stat _stat, string _type, CharacterStats _characterStats)
-            => m_answers[_stat].GetAnswer(_stat, _type, _characterStats);
+        {
+            var answerStat = _type == "object" ? _characterStats.HighestStat : _stat;
+            return m_answers[answerStat].GetAnswer(answerStat, _type, _characterStats);
+        }
 
         public string TryGetDialogue(string _id)
             => m_generalDialogue.TryGetValue(_id, out var dialogue) ? dialogue : "";

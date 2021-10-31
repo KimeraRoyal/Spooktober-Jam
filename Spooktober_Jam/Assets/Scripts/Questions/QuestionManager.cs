@@ -20,6 +20,8 @@ namespace Spooktober
 
         [SerializeField] private int m_maxRerolls;
 
+        private Dialogue.Types.Dialogue[] m_currentQuestions;
+        
         private float[] m_statWeights;
         
         private int m_count;
@@ -37,6 +39,11 @@ namespace Spooktober
             }
         }
 
+        private void Start()
+        {
+            OfferQuestions();
+        }
+
         public void OfferQuestions()
         {
             if (m_count >= m_maxQuestions) return;
@@ -52,9 +59,19 @@ namespace Spooktober
                 RollStat(stats);
             }
             AdjustOfferedWeights(stats);
+
+            m_currentQuestions = new Dialogue.Types.Dialogue[m_offerCount];
+            for (var i = 0; i < m_offerCount; i++)
+            {
+                m_currentQuestions[i] = m_dialogueManager.GetRandomQuestion(stats[i]);
+                Debug.Log(m_currentQuestions[i].Text);
+            }
             
             m_count++;
         }
+
+        public Dialogue.Types.Dialogue GetQuestion(int _index)
+            => m_currentQuestions[_index];
 
         private void RollStat(IList<Stat> _stats)
         {

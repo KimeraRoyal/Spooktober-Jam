@@ -51,6 +51,9 @@ namespace Spooktober.Dialogue.Types
                 //Pick a random answer.
                 return possibleAnswers[Random.Range(0, possibleAnswers.Count)];
             }
+
+            public Answer GetRandomAnswer()
+                => m_answers[Random.Range(0, m_answers.Length)];
         }
 
         private Dictionary<string, AnswerType> m_answerTypes;
@@ -62,6 +65,9 @@ namespace Spooktober.Dialogue.Types
 
         public Answer GetAnswer(Stat _stat, string _type, CharacterStats _characterStats)
             => m_answerTypes[_type].GetAnswer(_stat, _characterStats);
+
+        public Answer GetRandomAnswer(string _type)
+            => m_answerTypes[_type].GetRandomAnswer();
 
         public void AddAnswers(IReadOnlyList<SerializedDialogueFile.SerializedText> _serializedTexts, string _type)
         {

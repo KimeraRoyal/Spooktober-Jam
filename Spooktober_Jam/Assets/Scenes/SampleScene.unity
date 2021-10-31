@@ -4961,10 +4961,10 @@ RectTransform:
   m_Father: {fileID: 1071719398}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.525, y: 0.5}
-  m_AnchorMax: {x: 0.95, y: 0.5}
-  m_AnchoredPosition: {x: 35.5, y: 0}
-  m_SizeDelta: {x: -35.135, y: 38}
+  m_AnchorMin: {x: 0.525, y: 1}
+  m_AnchorMax: {x: 0.95, y: 1}
+  m_AnchoredPosition: {x: 0, y: -24}
+  m_SizeDelta: {x: 0, y: 38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &99300441
 MonoBehaviour:
@@ -5009,7 +5009,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 99300442}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1071719399}
+        m_TargetAssemblyTypeName: Spooktober.UI.TweenableUIElement, Assembly-CSharp
+        m_MethodName: SetEnabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &99300442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5479,8 +5491,9 @@ GameObject:
   m_Component:
   - component: {fileID: 729465811}
   - component: {fileID: 729465812}
+  - component: {fileID: 729465813}
   m_Layer: 5
-  m_Name: QuestionManager
+  m_Name: Questions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5500,8 +5513,8 @@ RectTransform:
   m_Father: {fileID: 1884495752}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5522,6 +5535,21 @@ MonoBehaviour:
   m_offeredStatMultiplier: 0.9
   m_chosenStatMultiplier: 0.5
   m_maxRerolls: 10
+--- !u!114 &729465813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729465810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ced3ce9de7bc7489be570028cf4fbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_questionButtonPrefab: {fileID: 63173777820404603, guid: 5f1e66caef53d8d459082b325c021b51, type: 3}
+  m_questionButtonOffset: 64
+  m_questionButtonOpenDelay: 0.2
 --- !u!1 &1071719397
 GameObject:
   m_ObjectHideFlags: 0
@@ -5531,6 +5559,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1071719398}
+  - component: {fileID: 1071719399}
   m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
@@ -5554,11 +5583,27 @@ RectTransform:
   m_Father: {fileID: 1884495752}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.25, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.5999756}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 48}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &1071719399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071719397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbc9a597b04919d46a69dcbad52fa27e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_closedHeight: {x: 0, y: 0}
+  m_openHeight: {x: 0, y: 48}
+  m_resizeTime: 0.5
+  m_enabled: 1
 --- !u!1 &1264119423
 GameObject:
   m_ObjectHideFlags: 0
@@ -5926,10 +5971,10 @@ RectTransform:
   m_Father: {fileID: 1071719398}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.05, y: 0.5}
-  m_AnchorMax: {x: 0.475, y: 0.5}
-  m_AnchoredPosition: {x: 95.1, y: 0}
-  m_SizeDelta: {x: -51.39507, y: 38}
+  m_AnchorMin: {x: 0.05, y: 1}
+  m_AnchorMax: {x: 0.475, y: 1}
+  m_AnchoredPosition: {x: 0, y: -24}
+  m_SizeDelta: {x: 0, y: 38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1405705704
 MonoBehaviour:
@@ -5974,7 +6019,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1405705705}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1071719399}
+        m_TargetAssemblyTypeName: Spooktober.UI.TweenableUIElement, Assembly-CSharp
+        m_MethodName: SetEnabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 729465813}
+        m_TargetAssemblyTypeName: Spooktober.QuestionButtonSpawner, Assembly-CSharp
+        m_MethodName: SpawnQuestionButtons
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1405705705
 MonoBehaviour:
   m_ObjectHideFlags: 0

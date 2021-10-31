@@ -41,11 +41,6 @@ namespace Spooktober.Dialogue
             m_textMeshProText = GetComponentInChildren<TMP_Text>();
         }
 
-        private void Start()
-        {
-            WriteText(m_dialogueManager.GetRandomQuestion(Stat.Cool).Text);
-        }
-
         public void WriteText(string _dialogue, bool _instant = false)
             => StartCoroutine(WriteTextCoroutine(_dialogue, _instant));
 

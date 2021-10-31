@@ -9,6 +9,8 @@ namespace Spooktober.Character
     {
         private readonly int[] m_statAmounts;
         private int m_statTotal;
+
+        public int StatTotal => m_statTotal;
         
         public CharacterStats(int _statTotal = 100)
         {
@@ -19,7 +21,7 @@ namespace Spooktober.Character
             SetStatAmounts(statWeights, statTotal);
         }
 
-        public float GetStat(Stat _stat)
+        public int GetStat(Stat _stat)
             => m_statAmounts[(int) _stat];
 
         private float[] PopulateUnbalancedStatValues(out float _total)

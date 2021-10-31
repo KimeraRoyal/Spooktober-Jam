@@ -1,7 +1,9 @@
+using System;
+using Spooktober.Dialogue;
 using UnityEngine;
 namespace Spooktober.Character.People
 {
-    public class Person : MonoBehaviour
+    public class Person : Character
     {
         
     }

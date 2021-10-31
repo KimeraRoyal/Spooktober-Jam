@@ -1,4 +1,5 @@
 ﻿using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 namespace Spooktober.Character
 {
@@ -8,12 +9,23 @@ namespace Spooktober.Character
 
         public string CharacterName => m_characterName;
 
-        public float cool;
-        public float cute;
-        public float serious;
-        public float childish;
-        public float cynical;
-        public float father;
+        [ShowInInspector]
+        public int Cool => CharacterStats?.GetStat(Stat.Cool) ?? 0;
+        
+        [ShowInInspector]
+        public int Cute => CharacterStats?.GetStat(Stat.Cute) ?? 0;
+        
+        [ShowInInspector]
+        public int Serious => CharacterStats?.GetStat(Stat.Serious) ?? 0;
+        
+        [ShowInInspector]
+        public int Childish => CharacterStats?.GetStat(Stat.Childish) ?? 0;
+        
+        [ShowInInspector]
+        public int Cynical => CharacterStats?.GetStat(Stat.Cynical) ?? 0;
+
+        [ShowInInspector]
+        public int Father => CharacterStats?.GetStat(Stat.Father) ?? 0;
 
         public CharacterStats CharacterStats
         {
@@ -26,15 +38,9 @@ namespace Spooktober.Character
             Generate();
         }
 
-        void Generate()
+        private void Generate()
         {
             CharacterStats = new CharacterStats();
-            cool = CharacterStats.GetStat(Stat.Cool);
-            cute = CharacterStats.GetStat(Stat.Cute);
-            serious = CharacterStats.GetStat(Stat.Serious);
-            childish = CharacterStats.GetStat(Stat.Childish);
-            cynical = CharacterStats.GetStat(Stat.Cynical);
-            father = CharacterStats.GetStat(Stat.Father);
         }
     }
 }

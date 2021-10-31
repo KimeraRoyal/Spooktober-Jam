@@ -252,7 +252,6 @@ GameObject:
   - component: {fileID: -1720172934129162683}
   - component: {fileID: 582735258167463913}
   - component: {fileID: 6324660572522377976}
-  - component: {fileID: 2639260146804824012}
   - component: {fileID: 7927781709059221000}
   m_Layer: 0
   m_Name: Person
@@ -289,6 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4464c2689f747cb4dadfc8d58a81ae2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_characterName: 
 --- !u!114 &582735258167463913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,25 +315,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_minRate: 0.95
   m_maxRate: 1.05
---- !u!114 &2639260146804824012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7780460676327560331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 824b8fadbeda4413891159a7324e7c2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_characterName: 
-  cool: 0
-  cute: 0
-  serious: 0
-  childish: 0
-  cynical: 0
-  father: 0
 --- !u!114 &7927781709059221000
 MonoBehaviour:
   m_ObjectHideFlags: 0

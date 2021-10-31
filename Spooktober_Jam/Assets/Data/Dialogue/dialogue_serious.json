@@ -4,8 +4,14 @@
     {"group": "questions_serious", "texts": 
     [
       {"text": "Would you ever FILE your TAXES?", "type": "would"},
+      {"text": "Would you ALL RIGHTS RESERVED?", "type": "would"},
+      {"text": "Would you go to COMPANIES ACT (1985)?", "type": "would"},
       {"text": "How much do you like BUSINESS?", "type": "do"},
+      {"text": "Do you often PUT DOWN DEPOSIT?", "type": "do"},
+      {"text": "How much do you ASSESS CASHFLOW DIAGRAM?", "type": "do"},
       {"text": "Can you FUNCTION according to a SCHEDULE?", "type": "can"},
+      {"text": "Can you APPLY PROFIT FORECAST?", "type": "can"},
+      {"text": "Can you do AGILE METHODOLOGY?", "type": "can"},
       {"text": "object question", "type": "object"}
     ]},
     {"group": "answers_would_serious", "texts":

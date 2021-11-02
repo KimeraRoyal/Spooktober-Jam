@@ -1,10 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using Spooktober.Questions;
 using TMPro;
 using UnityEngine;
-
-namespace Spooktober
+namespace Spooktober.UI
 {
     public class QuestionCount : MonoBehaviour
     {

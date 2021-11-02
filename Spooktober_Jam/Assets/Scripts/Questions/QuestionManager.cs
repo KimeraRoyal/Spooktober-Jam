@@ -1,27 +1,24 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using Spooktober.Character;
 using Spooktober.Dialogue;
-using Spooktober.Dialogue.Types;
-using Spooktober.UI;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
-namespace Spooktober
+namespace Spooktober.Questions
 {
     public class QuestionManager : MonoBehaviour
     {
         private class QuestionHolder
         {
-            public Dialogue.Types.Dialogue m_dialogue;
+            public Dialogue.Types.DialogueLine MDialogueLine;
             public Stat m_stat;
 
-            public QuestionHolder(Stat _stat, Dialogue.Types.Dialogue _dialogue)
+            public QuestionHolder(Stat _stat, Dialogue.Types.DialogueLine dialogueLine)
             {
                 m_stat = _stat;
-                m_dialogue = _dialogue;
+                MDialogueLine = dialogueLine;
             }
         }
         
@@ -85,27 +82,35 @@ namespace Spooktober
         }
 
         public UnityEvent m_clickQuestionEvent;
+        public UnityEvent m_pickQuestionEvent;
         public UnityEvent m_countFullEvent;
+
+        public static bool m_selectingQuestion = false;
 
         public void ClickQuestions()
         {
             if (m_count >= m_maxQuestions) return;
             m_clickQuestionEvent?.Invoke();
+            m_selectingQuestion = true;
         }
 
         public void PickQuestion(int _id)
         {
+            m_pickQuestionEvent?.Invoke();
+            
             m_count++;
             if (m_count >= m_maxQuestions)
             {
                 m_countFullEvent?.Invoke();
             }
+
+            m_selectingQuestion = false;
             
-            m_answerManager.ShowAnswers(m_currentQuestions[_id].m_stat, m_currentQuestions[_id].m_dialogue);
+            m_answerManager.ShowAnswers(m_currentQuestions[_id].m_stat, m_currentQuestions[_id].MDialogueLine);
         }
 
-        public Dialogue.Types.Dialogue GetQuestion(int _index)
-            => m_currentQuestions[_index].m_dialogue;
+        public Dialogue.Types.DialogueLine GetQuestion(int _index)
+            => m_currentQuestions[_index].MDialogueLine;
 
         private void RollStat(IList<Stat> _stats)
         {

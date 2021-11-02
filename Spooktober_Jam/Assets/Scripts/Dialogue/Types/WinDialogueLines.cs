@@ -3,22 +3,22 @@ using System.Linq;
 using UnityEngine;
 namespace Spooktober.Dialogue.Types
 {
-    public class WinDialogues
+    public class WinDialogueLines
     {
-        private Answer[] m_dialogues;
+        private AnswerLine[] m_dialogues;
         
-        public WinDialogues(IReadOnlyList<SerializedDialogueFile.SerializedText> _serializedTexts)
+        public WinDialogueLines(IReadOnlyList<SerializedDialogueFile.SerializedText> _serializedTexts)
         {
-            m_dialogues = new Answer[_serializedTexts.Count];
+            m_dialogues = new AnswerLine[_serializedTexts.Count];
 
             for (var i = 0; i < _serializedTexts.Count; i++)
             {
                 var serializedText = _serializedTexts[i];
-                m_dialogues[i] = new Answer("", serializedText.Text, serializedText.Value);
+                m_dialogues[i] = new AnswerLine("", serializedText.Text, serializedText.Value);
             }
         }
 
-        public Dialogue GetAnswer(int _score)
+        public DialogueLine GetAnswer(int _score)
         {
             //Get the highest Value in the answer list, where the Value isn't greater than this character's stat.
             var highestValue = m_dialogues.Select(answer => answer.Value).Where(value => value <= _score).Max();

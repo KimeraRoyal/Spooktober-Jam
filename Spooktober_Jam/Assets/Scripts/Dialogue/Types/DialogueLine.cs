@@ -1,6 +1,6 @@
 ﻿namespace Spooktober.Dialogue.Types
 {
-    public class Dialogue
+    public class DialogueLine
     {
         private string m_type;
         
@@ -10,7 +10,7 @@
         
         public string Text => m_text;
 
-        public Dialogue(string _type, string _text)
+        public DialogueLine(string _type, string _text)
         {
             m_type = _type;
             m_text = _text;

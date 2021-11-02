@@ -32,10 +32,10 @@ RectTransform:
   m_Father: {fileID: 63173777820404600}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 256, y: 38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &63173777631114567
 CanvasRenderer:
@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Your question here!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d06741cdd6775c742b156c08d911baa6, type: 2}
-  m_sharedMaterial: {fileID: 70002371819012777, guid: d06741cdd6775c742b156c08d911baa6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -300,6 +300,7 @@ MonoBehaviour:
   m_resizeTime: 0.3
   m_enabled: 0
   m_interactable: 0
+  m_id: 0
 --- !u!114 &-1968300500049185880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,3 +316,5 @@ MonoBehaviour:
   m_dialogueDelay: 0.02
   m_dialogueMultiplier: 1
   m_skipMultiplier: 0.2
+  m_minDialoguePitchVariance: 0
+  m_maxDialoguePitchVariance: 0

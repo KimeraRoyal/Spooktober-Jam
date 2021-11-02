@@ -1,11 +1,8 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
-using Spooktober.UI;
+using Spooktober.Questions;
 using UnityEngine;
-
-namespace Spooktober
+namespace Spooktober.UI
 {
     public class QuestionButtonSpawner : MonoBehaviour
     {

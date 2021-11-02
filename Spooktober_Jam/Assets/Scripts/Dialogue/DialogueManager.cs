@@ -9,21 +9,21 @@ namespace Spooktober.Dialogue
     {
         [SerializeField] private TextAsset[] m_dialogueTextAssets;
 
-        private Dictionary<Stat, Types.Questions> m_questions;
-        private Dictionary<Stat, Answers> m_answers;
+        private Dictionary<Stat, Types.QuestionLines> m_questions;
+        private Dictionary<Stat, AnswerLines> m_answers;
         
-        private Dictionary<Stat, Types.Questions> m_statNames;
+        private Dictionary<Stat, Types.QuestionLines> m_statNames;
 
-        private Dictionary<string, WinDialogues> m_winDialogues;
+        private Dictionary<string, WinDialogueLines> m_winDialogues;
         private Dictionary<string, string> m_generalDialogue;
 
         private void Awake()
         {
-            m_questions = new Dictionary<Stat, Types.Questions>();
-            m_answers = new Dictionary<Stat, Answers>();
-            m_statNames = new Dictionary<Stat, Types.Questions>();
+            m_questions = new Dictionary<Stat, Types.QuestionLines>();
+            m_answers = new Dictionary<Stat, AnswerLines>();
+            m_statNames = new Dictionary<Stat, Types.QuestionLines>();
 
-            m_winDialogues = new Dictionary<string, WinDialogues>();
+            m_winDialogues = new Dictionary<string, WinDialogueLines>();
             m_generalDialogue = new Dictionary<string, string>();
 
             foreach (var dialogueTextAsset in m_dialogueTextAssets)
@@ -32,10 +32,10 @@ namespace Spooktober.Dialogue
             }
         }
 
-        public Types.Dialogue GetRandomQuestion(Stat _stat)
+        public Types.DialogueLine GetRandomQuestion(Stat _stat)
             => m_questions[_stat].GetRandomQuestion();
 
-        public Answer GetAnswer(Stat _stat, string _type, CharacterStats _characterStats)
+        public AnswerLine GetAnswer(Stat _stat, string _type, CharacterStats _characterStats)
         {
             var answerStat = _type == "object" ? _characterStats.HighestStat : _stat;
             return m_answers[answerStat].GetAnswer(answerStat, _type, _characterStats);
@@ -87,34 +87,33 @@ namespace Spooktober.Dialogue
                     break;
                 }
 
-                if (groupStat < 0) { continue; }
-                
+                var hasStat = groupStat >= 0;
                 switch (groupName[0])
                 {
                     case "questions":
-                        m_questions.Add((Stat) groupStat, new Types.Questions(group.Texts));
+                        if(hasStat) { m_questions.Add((Stat) groupStat, new Types.QuestionLines(group.Texts)); }
                         break;
                     case "answers":
-                        TryGetAnswers((Stat) groupStat).AddAnswers(group.Texts, groupName[1]);
+                        if(hasStat) { TryGetAnswers((Stat) groupStat).AddAnswers(group.Texts, groupName[1]); }
                         break;
                     case "stat":
-                        m_statNames.Add((Stat) groupStat, new Types.Questions(group.Texts));
+                        if(hasStat) { m_statNames.Add((Stat) groupStat, new Types.QuestionLines(group.Texts)); }
                         break;
                     case "win":
-                        m_winDialogues.Add(groupName[1], new WinDialogues(group.Texts));
+                        m_winDialogues.Add(groupName[1], new WinDialogueLines(group.Texts));
                         break;
                 }
             }
         }
 
-        private Answers TryGetAnswers(Stat _stat)
+        private AnswerLines TryGetAnswers(Stat _stat)
         {
             if (m_answers.TryGetValue(_stat, out var value))
             {
                 return value;
             }
 
-            value = new Answers();
+            value = new AnswerLines();
             m_answers.Add(_stat, value);
             return value;
         }

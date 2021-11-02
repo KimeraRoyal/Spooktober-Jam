@@ -3,6 +3,7 @@ using System.Collections;
 using Spooktober.Character;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Spooktober.Dialogue
 {
@@ -11,6 +12,8 @@ namespace Spooktober.Dialogue
         private DialogueManager m_dialogueManager;
         
         private TMP_Text m_textMeshProText;
+
+        private AudioSource m_audioSource;
     
         /// <summary>
         /// The default delay between characters when writing text to the dialogue box.
@@ -27,12 +30,13 @@ namespace Spooktober.Dialogue
         /// </summary>
         [SerializeField] private float m_skipMultiplier = 0.2f;
 
-        /// <summary>
-        /// The sound played per-word when writing dialogue.
-        /// </summary>
-        private string m_dialogueSound;
+        [SerializeField] private float m_minDialoguePitchVariance, m_maxDialoguePitchVariance;
 
         private bool m_active;
+
+        public static bool m_activeSupreme;
+
+        public AudioSource AudioSource => m_audioSource;
 
         public bool Active => m_active;
 
@@ -41,6 +45,7 @@ namespace Spooktober.Dialogue
             m_dialogueManager = FindObjectOfType<DialogueManager>();
             
             m_textMeshProText = GetComponentInChildren<TMP_Text>();
+            m_audioSource = GetComponent<AudioSource>();
         }
 
         public void WriteText(string[] _dialogues, float _delay = 0.0f, Action _onFinished = null)
@@ -55,10 +60,12 @@ namespace Spooktober.Dialogue
             {
                 yield return WriteTextCoroutine(dialogue, false);
                 m_active = true;
+                m_activeSupreme = true;
                 if (_delay > 0.0f) yield return new WaitForSeconds(_delay);
-                else yield return new WaitUntil(() => Input.anyKeyDown);
+                else yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0));
             }
             m_active = false;
+            m_activeSupreme = false;
             _onFinished?.Invoke();
         }
 
@@ -81,7 +88,10 @@ namespace Spooktober.Dialogue
         private IEnumerator TypewriteDialogue(string _dialogue, float _letterMultiplier, float _skipMultiplier)
         {
             var charIsLetter = false;
-            var hasSfx = m_dialogueSound != "";
+            var hasSfx = m_audioSource != null && m_audioSource.clip != null;
+
+            var dialoguePitch = 1.0f;
+            if (hasSfx) { dialoguePitch = m_audioSource.pitch; }
             
             for (var i = 0; i < _dialogue.Length; i++)
             {
@@ -98,9 +108,12 @@ namespace Spooktober.Dialogue
 
                     var delayMultiplier = charIsLetter ? _letterMultiplier : _skipMultiplier;
                     var delay = m_dialogueDelay * delayMultiplier;
-                    
-                    //TODO: Audio
-                    //if(hasSfx && charIsLetter && !charWasLetter) m_audioManager.PlayOneShot(m_dialogueSound);
+
+                    if (hasSfx && charIsLetter && !charWasLetter)
+                    {
+                        m_audioSource.pitch = dialoguePitch + Random.Range(m_minDialoguePitchVariance, m_maxDialoguePitchVariance);
+                        m_audioSource.Play();
+                    }
                     if (delay <= 0) continue;
                     yield return new WaitForSeconds(delay);
                 }
@@ -110,6 +123,8 @@ namespace Spooktober.Dialogue
                     break;
                 }
             }
+            
+            if (hasSfx) { m_audioSource.pitch = dialoguePitch; }
         }
     }
 }

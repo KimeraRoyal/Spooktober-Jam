@@ -14,6 +14,8 @@ namespace Spooktober.UI
 
         private DialogueBox m_dialogueBox;
 
+        public DialogueBox DialogueBox => m_dialogueBox;
+
         private void Awake()
         {
             m_dialogueManager = FindObjectOfType<DialogueManager>();

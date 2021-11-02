@@ -41,8 +41,8 @@
     {"id": "type_b_entity0", "text": "IT MUST BE {0}. IT MUST NOT BE {2}."},
     {"id": "type_b_entity1", "text": "ONE THAT IS {0}, ONE THAT IS NOT {2}. BRING THIS."}
   ],
-  
-  "groups": 
+
+  "groups" :
   [
     {"group": "win_entity", "texts":
     [

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,17 +7,36 @@ namespace Spooktober
 {
     public class GameManager : MonoBehaviour
     {
+        private static GameManager _instance;
+
+        public static int highScore = 0;
+        public static int totalScore = 0;
+        
         public GameObject personPrefab;
-        public Character.MonsterScript monster;
+        public MonsterScript monster;
         GameObject[] people;
 
-        void Update()
+        public static bool monster0seen = false;
+        public static bool monster1seen = false;
+        public static bool monster2seen = false;
+
+        private void Awake()
+        {
+            if (_instance) Destroy(gameObject);
+            else
+            {
+                _instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+        }
+
+        /*void Update()
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
                 Reset();
             }
-        }
+        }*/
 
         private void Reset()
         {

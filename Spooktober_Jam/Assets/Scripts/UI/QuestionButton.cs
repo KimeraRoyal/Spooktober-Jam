@@ -1,4 +1,5 @@
 ﻿using Spooktober.Dialogue;
+using Spooktober.Questions;
 using UnityEngine;
 namespace Spooktober.UI
 {

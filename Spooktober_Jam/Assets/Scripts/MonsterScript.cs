@@ -13,6 +13,8 @@ namespace Spooktober
     public class MonsterScript : MonoBehaviour
     {
         private DialogueManager m_dialogueManager;
+
+        private SaveManager m_saveManager;
         
         public float randomness = 5;
         public GameObject monst;
@@ -55,6 +57,7 @@ namespace Spooktober
         private void Awake()
         {
             m_dialogueManager = FindObjectOfType<DialogueManager>();
+            m_saveManager = FindObjectOfType<SaveManager>();
         }
 
         // Start is called before the first frame update
@@ -186,9 +189,36 @@ namespace Spooktober
 
             var score = Mathf.RoundToInt(CalculateSacrificeScore(sacrifice));
             var winDialogue = m_dialogueManager.GetWinDialogue(monsterName, score);
-            introDialogue.DialogueBox.WriteText(new[]{winDialogue}, -1, () => OutroOver(score));
+            
+            var calculatedScore = Mathf.Clamp(score / 2.0f, 0, 100);
+            var savedScore = Mathf.RoundToInt(calculatedScore);
+            if (savedScore > Mathf.FloorToInt(calculatedScore)) { savedScore++; }
+            
+            if (GameManager.highScore < savedScore) GameManager.highScore = savedScore;
             
             var isEntity = monsterName == "entity";
+            var lostToEntity = isEntity && score < 40;
+
+            if (lostToEntity && GameManager.lostToEntity < 1)
+            {
+                GameManager.lostToEntity = 1;
+                m_saveManager.SaveEntityImage(0);
+            }
+            else if (isEntity || score >= 50)
+            {
+                GameManager.totalScore += savedScore;
+
+                if (isEntity && GameManager.lostToEntity < 2)
+                {
+                    GameManager.lostToEntity = 2;
+                    m_saveManager.SaveEntityImage(1);
+                }
+            }
+            
+            m_saveManager.SaveGame();
+            
+            introDialogue.DialogueBox.WriteText(new[]{winDialogue}, -1, () => OutroOver(lostToEntity));
+            
             if (!isEntity)
             {
                 m_nonEntitySacrificeEvent?.Invoke();
@@ -199,22 +229,11 @@ namespace Spooktober
         public AudioSource m_succeedMusic;
         public AudioSource m_failMusic;
 
-        private void OutroOver(float _score)
+        private void OutroOver(bool _crash)
         {
-            var calculatedScore = Mathf.Clamp(_score / 2.0f, 0, 100);
-            var savedScore = Mathf.RoundToInt(calculatedScore);
-            if (savedScore > Mathf.FloorToInt(calculatedScore)) { savedScore++; }
-            
-            if (GameManager.highScore < savedScore) GameManager.highScore = savedScore;
-            
-            var isEntity = monsterName == "entity";
-            if (isEntity && _score < 40)
+            if (_crash)
             {
                 Application.Quit();
-            }
-            else if (isEntity || _score >= 50)
-            {
-                GameManager.totalScore += savedScore;
             }
 
             SceneManager.LoadScene(0);

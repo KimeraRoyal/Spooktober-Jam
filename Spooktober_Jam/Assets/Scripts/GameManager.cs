@@ -9,6 +9,8 @@ namespace Spooktober
     {
         private static GameManager _instance;
 
+        private SaveManager m_saveManager;
+
         public static int highScore = 0;
         public static int totalScore = 0;
         
@@ -20,6 +22,8 @@ namespace Spooktober
         public static bool monster1seen = false;
         public static bool monster2seen = false;
 
+        public static int lostToEntity;
+
         private void Awake()
         {
             if (_instance) Destroy(gameObject);
@@ -28,15 +32,10 @@ namespace Spooktober
                 _instance = this;
                 DontDestroyOnLoad(gameObject);
             }
-        }
 
-        /*void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                Reset();
-            }
-        }*/
+            m_saveManager = FindObjectOfType<SaveManager>();
+            m_saveManager.LoadGame();
+        }
 
         private void Reset()
         {

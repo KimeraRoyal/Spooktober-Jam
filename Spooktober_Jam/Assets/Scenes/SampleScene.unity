@@ -5354,6 +5354,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4793908105126097917, guid: 62071c26ff12f774599942e96adb50d0, type: 3}
+      propertyPath: m_entityImages.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793908105126097917, guid: 62071c26ff12f774599942e96adb50d0, type: 3}
+      propertyPath: m_entityImages.Array.data[0]
+      value: 
+      objectReference: {fileID: 2800000, guid: 5628abe2d94214e45a1e395acd09ccce, type: 3}
+    - target: {fileID: 4793908105126097917, guid: 62071c26ff12f774599942e96adb50d0, type: 3}
+      propertyPath: m_entityImages.Array.data[1]
+      value: 
+      objectReference: {fileID: 2800000, guid: 2739b2d40a11dcd4f8dc50bd5361dfd3, type: 3}
+    - target: {fileID: 4793908105126097917, guid: 62071c26ff12f774599942e96adb50d0, type: 3}
+      propertyPath: m_entityImageFileNames.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793908105126097917, guid: 62071c26ff12f774599942e96adb50d0, type: 3}
+      propertyPath: m_entityImageFileNames.Array.data[0]
+      value: YOUR FAILURE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793908105126097917, guid: 62071c26ff12f774599942e96adb50d0, type: 3}
+      propertyPath: m_entityImageFileNames.Array.data[1]
+      value: HEY GOOD JOB BUDDY! YOU DID GOOD!
+      objectReference: {fileID: 0}
     - target: {fileID: 7871856256391076413, guid: 62071c26ff12f774599942e96adb50d0, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -7515,15 +7539,15 @@ MonoBehaviour:
   m_highScoreString: 'Best Rank: {0}'
   m_ranks:
   - m_name: S
-    m_minScore: 90
+    m_minScore: 45
   - m_name: A
-    m_minScore: 70
+    m_minScore: 35
   - m_name: B
-    m_minScore: 60
+    m_minScore: 30
   - m_name: C
-    m_minScore: 50
+    m_minScore: 25
   - m_name: D
-    m_minScore: 20
+    m_minScore: 10
   - m_name: F
     m_minScore: 1
   - m_name: None!

@@ -19,10 +19,15 @@ namespace Spooktober.Character.People
 
         public DialogueBox m_dialogueBox;
 
+        [SerializeField] private float m_hoverAmount;
+        [SerializeField] private Transform m_hoverTransform;
+
         [SerializeField] private Color m_enabledColor;
         [SerializeField] private Color m_disabledColor;
 
         [SerializeField] private float m_minVoicePitch, m_maxVoicePitch;
+        [SerializeField] private float m_minHoverPitch, m_maxHoverPitch;
+        [SerializeField] private AudioSource m_hoverSfx;
 
         private Vector3 m_startPosition;
         private bool m_hovered;
@@ -65,6 +70,10 @@ namespace Spooktober.Character.People
         private void OnMouseEnter()
         {
             m_hovered = true;
+
+            if (!m_hoverSfx || DialogueBox.m_activeSupreme || QuestionManager.m_selectingQuestion || inDialogue) { return; }
+            m_hoverSfx.pitch = Random.Range(m_minHoverPitch, m_maxHoverPitch);
+            m_hoverSfx.Play();
         }
 
         private void OnMouseExit()

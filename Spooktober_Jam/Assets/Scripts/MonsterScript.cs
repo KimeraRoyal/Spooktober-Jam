@@ -15,6 +15,8 @@ namespace Spooktober
         private DialogueManager m_dialogueManager;
 
         private SaveManager m_saveManager;
+
+        private ScreenStatic m_screenStatic;
         
         public float randomness = 5;
         public GameObject monst;
@@ -58,6 +60,7 @@ namespace Spooktober
         {
             m_dialogueManager = FindObjectOfType<DialogueManager>();
             m_saveManager = FindObjectOfType<SaveManager>();
+            m_screenStatic = FindObjectOfType<ScreenStatic>();
         }
 
         // Start is called before the first frame update
@@ -71,10 +74,16 @@ namespace Spooktober
             var fadeSequence = DOTween.Sequence();
             fadeSequence.Append(DOTween.To(() => holdEscape.DarknessOffset, x => holdEscape.DarknessOffset = x, 0, m_monsterSeen ? 1.0f : 2.0f));
             
+            if (monsterIndex == 2) { fadeSequence.Append(DOTween.To(() => m_screenStatic.Amount, value => m_screenStatic.Amount = value, 0.15f, 2.0f)); }
+            else { m_screenStatic.Amount = 0.0f; }
+            
             if (!m_monsterSeen) { fadeSequence.AppendCallback(InitiateGame); }
             else { InitiateGame(); }
             fadeSequence.Play();
         }
+
+        [SerializeField] private Texture2D m_normalStaticSlope;
+        [SerializeField] private Texture2D m_entityStaticSlope;
 
         public void InitiateMonster()
         {
@@ -96,6 +105,8 @@ namespace Spooktober
                     monsterName = "entity";
                     break;
             }
+
+            m_screenStatic.SlopeTexture = monsterIndex == 2 ? m_entityStaticSlope : m_normalStaticSlope;
 
             people = GameObject.FindGameObjectsWithTag("Player");
             CharacterStats = people[Random.Range(0,people.Length)].GetComponent<Character.Character>().CharacterStats;
@@ -237,18 +248,33 @@ namespace Spooktober
 
         public AudioSource m_succeedMusic;
         public AudioSource m_failMusic;
+        
+        public AudioSource m_entityMusic;
+        public AudioSource m_static;
 
         private void OutroOver(bool _crash)
         {
+            var fadeSequence = DOTween.Sequence();
             if (_crash)
             {
-                Application.Quit();
+                HoldEscape.s_enabled = false;
+                m_static.volume = 0.0f;
+
+                m_screenStatic.SlopeTexture = m_normalStaticSlope;
+                
+                //m_entityMusic.Play();
+                m_static.Play();
+                
+                fadeSequence.Append(m_static.DOFade(1.0f, 4.0f));
+                fadeSequence.Insert(0, DOTween.To(() => m_screenStatic.Amount, value => m_screenStatic.Amount = value, 1.0f, 4.0f));
+                fadeSequence.AppendCallback(() => Application.Quit(0));
             }
             else
             {
                 var holdEscape = FindObjectOfType<HoldEscape>();
 
                 fadeSequence.Append(DOTween.To(() => holdEscape.DarknessOffset, x => holdEscape.DarknessOffset = x, 1, 1.0f));
+                if (monsterIndex == 2) { fadeSequence.Append(DOTween.To(() => m_screenStatic.Amount, value => m_screenStatic.Amount = value, 0.0f, 2.0f)); }
                 fadeSequence.AppendCallback(() => SceneManager.LoadScene(0));
             }
             fadeSequence.Play();

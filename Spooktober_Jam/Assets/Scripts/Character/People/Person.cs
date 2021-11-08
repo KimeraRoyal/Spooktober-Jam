@@ -85,8 +85,8 @@ namespace Spooktober.Character.People
         private void Update()
         {
             if(!inDialogue && illuminated && !QuestionManager.m_selectingQuestion) m_multiplyChildColours.MultiplyColour = CurrentColor;
-            var targetPosition = !DialogueBox.m_activeSupreme && !QuestionManager.m_selectingQuestion && !inDialogue && m_hovered ? m_startPosition + Vector3.up * 0.5f : m_startPosition;
-            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref m_velocity, 0.3f);
+            var targetPosition = !DialogueBox.m_activeSupreme && !QuestionManager.m_selectingQuestion && !inDialogue && m_hovered ? m_startPosition + Vector3.up * m_hoverAmount : m_startPosition;
+            m_hoverTransform.position = Vector3.SmoothDamp(m_hoverTransform.position, targetPosition, ref m_velocity, 0.3f);
         }
 
         private void OnMouseDown()

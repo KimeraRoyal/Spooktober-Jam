@@ -65,13 +65,22 @@ namespace Spooktober
         {
             monst = null;
             InitiateMonster();
+            
+            var holdEscape = FindObjectOfType<HoldEscape>();
+
+            var fadeSequence = DOTween.Sequence();
+            fadeSequence.Append(DOTween.To(() => holdEscape.DarknessOffset, x => holdEscape.DarknessOffset = x, 0, m_monsterSeen ? 1.0f : 2.0f));
+            
+            if (!m_monsterSeen) { fadeSequence.AppendCallback(InitiateGame); }
+            else { InitiateGame(); }
+            fadeSequence.Play();
         }
 
         public void InitiateMonster()
         {
-            monsterIndex = Mathf.RoundToInt(Random.Range(-0.4f, 1.8f));
-
             if (monst != null) Destroy(monst);
+            
+            monsterIndex = Mathf.RoundToInt(Random.Range(-0.4f, 1.8f));
             switch (monsterIndex)
             {
                 case 0:
@@ -235,8 +244,14 @@ namespace Spooktober
             {
                 Application.Quit();
             }
+            else
+            {
+                var holdEscape = FindObjectOfType<HoldEscape>();
 
-            SceneManager.LoadScene(0);
+                fadeSequence.Append(DOTween.To(() => holdEscape.DarknessOffset, x => holdEscape.DarknessOffset = x, 1, 1.0f));
+                fadeSequence.AppendCallback(() => SceneManager.LoadScene(0));
+            }
+            fadeSequence.Play();
         }
 
         private float CalculateSacrificeScore(Person _sacrifice)

@@ -13,7 +13,17 @@ namespace Spooktober
 
         [SerializeField] private float m_escapeDuration;
 
+        [SerializeField] private float m_darknessOffset;
+
+        public static bool s_enabled = true;
+
         private float m_holdTime;
+
+        public float DarknessOffset
+        {
+            get => m_darknessOffset;
+            set => m_darknessOffset = value;
+        }
 
         private void Awake()
         {
@@ -24,7 +34,7 @@ namespace Spooktober
 
         private void Update()
         {
-            if (Input.GetKey(KeyCode.Escape))
+            if (s_enabled && Input.GetKey(KeyCode.Escape))
             {
                 m_holdTime += Time.deltaTime;
             }
@@ -33,11 +43,12 @@ namespace Spooktober
                 m_holdTime = 0;
             }
 
-            var progress = Mathf.Clamp(m_holdTime / m_escapeDuration, 0, 1);
+            var progress = Mathf.Clamp(m_holdTime / m_escapeDuration + m_darknessOffset, 0, 1);
             var color = m_image.color;
             color.a = progress;
             m_image.color = color;
 
+            if (!s_enabled) { return; }
             foreach (var audioSource in m_audioSources)
             {
                 audioSource.volume = 1 - progress;

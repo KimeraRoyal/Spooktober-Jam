@@ -10,6 +10,9 @@ namespace Spooktober.UI
         [SerializeField] private string m_readyText;
         [SerializeField] private string m_noLightsText;
 
+        [SerializeField] private float m_minSpotlightPitch, m_maxSpotlightPitch;
+        [SerializeField] private AudioSource m_spotlightOnSfx, m_spotlightOffSfx;
+
         private int m_lightsOff;
 
         public int LightsOff => m_lightsOff;
@@ -24,10 +27,15 @@ namespace Spooktober.UI
             UpdateCounter();
         }
 
-        public void AdjustCounter(int _amount)
+        public void AdjustCounter(int _amount, bool _playSound = true)
         {
             m_lightsOff += _amount;
             UpdateCounter();
+
+            if (!_playSound) { return; }
+            var spotlightSfx = _amount > 0 ? m_spotlightOnSfx : m_spotlightOffSfx;
+            spotlightSfx.pitch = Random.Range(m_minSpotlightPitch, m_maxSpotlightPitch);
+            spotlightSfx.Play();
         }
 
         public void UpdateCounter()

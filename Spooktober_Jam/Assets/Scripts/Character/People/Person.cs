@@ -59,7 +59,7 @@ namespace Spooktober.Character.People
         private void Start()
         {
             m_startPosition = transform.position;
-            m_sacrificeCount.AdjustCounter(1);
+            m_sacrificeCount.AdjustCounter(1, false);
         }
 
         public string GetAnswer(Dialogue.Types.DialogueLine _question, Stat _stat)

@@ -21,6 +21,7 @@ namespace Spooktober
         public static bool monster0seen = false;
         public static bool monster1seen = false;
         public static bool monster2seen = false;
+        public static bool monster2secondDialogueSeen = false;
 
         public static int lostToEntity;
 

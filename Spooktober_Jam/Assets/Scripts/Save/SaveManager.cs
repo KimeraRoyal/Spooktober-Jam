@@ -23,11 +23,13 @@ namespace Spooktober
             {
                 GameManager.monster0seen,
                 GameManager.monster1seen,
-                GameManager.monster2seen
+                GameManager.monster2seen,
+                GameManager.monster2secondDialogueSeen
             };
             
             var saveData = new SaveData
             (
+                1,
                 GameManager.totalScore,
                 GameManager.highScore,
                 hasSeenMonsters,
@@ -55,6 +57,7 @@ namespace Spooktober
             GameManager.monster0seen = saveData.HasSeenMonsters[0];
             GameManager.monster1seen = saveData.HasSeenMonsters[1];
             GameManager.monster2seen = saveData.HasSeenMonsters[2];
+            if(saveData.Version > 0) { GameManager.monster2secondDialogueSeen = saveData.HasSeenMonsters[3]; }
 
             GameManager.lostToEntity = saveData.LostToEntity;
         }

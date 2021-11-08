@@ -44,11 +44,15 @@ namespace Spooktober
         public bool mode;
 
         public UnityEvent m_introBegin;
+        public UnityEvent m_preIntroBegin;
         public UnityEvent m_introOver;
         public UnityEvent m_introSkip;
 
         public MonsterWants introDialogue;
         public MonsterWants wantDialogue;
+
+        private bool m_monsterSeen;
+        private bool m_secondDialogue;
 
         public CharacterStats CharacterStats
         {
@@ -141,9 +145,34 @@ namespace Spooktober
                 }
             }
 
+            HasMonsterBeenSeen();
+            if (!m_monsterSeen)
+            {
+                m_preIntroBegin?.Invoke();
+            }
+        }
+
+        private void InitiateGame()
+        {
             var monster = monst.GetComponent<Character.Monster.Monster>();
-            
-            var monsterSeen = false;
+            if (!m_monsterSeen)
+            {
+                m_introBegin?.Invoke();
+                var dialogueName = "intro_" + monsterName;
+                if (m_secondDialogue) dialogueName += "2";
+                introDialogue.UpdateText(dialogueName, monster.IntroDialogueLines, IntroOver);
+            }
+            else
+            {
+                m_introSkip?.Invoke();
+                IntroOver();
+            }
+        }
+
+        private void HasMonsterBeenSeen()
+        {
+            m_monsterSeen = false;
+            m_secondDialogue = false;
             if (!GameManager.monster0seen && monsterIndex == 0)
             {
                 GameManager.monster0seen = true;
@@ -152,24 +181,21 @@ namespace Spooktober
             {
                 GameManager.monster1seen = true;
             }
-            else if (!GameManager.monster2seen && monsterIndex == 2)
+            else if ((!GameManager.monster2seen || !GameManager.monster2secondDialogueSeen) && monsterIndex == 2)
             {
-                GameManager.monster2seen = true;
+                if (!GameManager.monster2seen)
+                {
+                    GameManager.monster2seen = true;
+                }
+                else if (!GameManager.monster2secondDialogueSeen)
+                {
+                    GameManager.monster2secondDialogueSeen = true;
+                    m_secondDialogue = true;
+                }
             }
             else
             {
-                monsterSeen = true;
-            }
-            
-            if (!monsterSeen)
-            {
-                m_introBegin?.Invoke();
-                introDialogue.UpdateText("intro_" + monsterName, monster.IntroDialogueLines, IntroOver);
-            }
-            else
-            {
-                m_introSkip?.Invoke();
-                IntroOver();
+                m_monsterSeen = true;
             }
         }
         
@@ -228,7 +254,7 @@ namespace Spooktober
             {
                 GameManager.totalScore += savedScore;
 
-                if (isEntity && GameManager.lostToEntity < 2)
+                if (isEntity && GameManager.lostToEntity == 1)
                 {
                     GameManager.lostToEntity = 2;
                     m_saveManager.SaveEntityImage(1);

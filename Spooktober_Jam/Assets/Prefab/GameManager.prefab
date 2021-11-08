@@ -81,3 +81,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_saveFileName: /save.dat
+  m_entityImages:
+  - {fileID: 2800000, guid: 5628abe2d94214e45a1e395acd09ccce, type: 3}
+  - {fileID: 2800000, guid: 2739b2d40a11dcd4f8dc50bd5361dfd3, type: 3}
+  m_entityImageFileNames:
+  - YOUR FAILURE
+  - HEY GOOD JOB BUDDY! YOU DID GOOD!

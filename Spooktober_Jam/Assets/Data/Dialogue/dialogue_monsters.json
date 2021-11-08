@@ -23,6 +23,13 @@
     {"id": "intro_entity_4", "text": "IF YOU FAIL... YOUR TIME WILL BE CUT SHORT."},
     {"id": "intro_entity_5", "text": "CHOOSE WISELY."},
 
+    {"id": "intro_entity2_0", "text": "OUR PREVIOUS EXCHANGE..."},
+    {"id": "intro_entity2_1", "text": "YOU WERE UNSUCCESSFUL."},
+    {"id": "intro_entity2_2", "text": "ONCE AGAIN YOU WILL OFFER SOULS."},
+    {"id": "intro_entity2_3", "text": "WITH YOUR LIFE AS THE BARGAIN."},
+    {"id": "intro_entity2_4", "text": "THIS SECOND CHANCE IS GENEROUS."},
+    {"id": "intro_entity2_5", "text": "DO NOT FAIL AGAIN."},
+
     {"id": "type_a_gnome0", "text": "My LAWNMOWER would get PUMPED UP from a soul that's {0} and {1}. Maybe even {3}, too."},
     {"id": "type_a_gnome1", "text": "It would be so awesome if you got me a {0} and {1} soul. I'll throw in bonus points for {3}."},
 
